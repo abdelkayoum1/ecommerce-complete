@@ -6,41 +6,44 @@ const app=express();
 const cors=require('cors');
 const port=process.env.PORT;
 
-const  createcategory=require("../../commerce/backend/routes/categoryRoute")
-const  subcategory=require("../../commerce/backend/routes/subCategoryRoute")
-const  brandrouter=require("../../commerce/backend/routes/brandRoute")
-const  productroute=require("../../commerce/backend/routes/productRoute")
-const  userRoute=require("../../commerce/backend/routes/userRoute")
-const  authRouter=require("../../commerce/backend/routes/authRoute")
-const  reviewsrouter=require("../../commerce/backend/routes/reviewRoute")
-const  wishlistroute=require("../../commerce/backend/routes/wishlistRoute")
-const  coupounroute=require("../../commerce/backend/routes/couponRoute")
-const  adresroute=require("../../commerce/backend/routes/addressRoute")
-const  carteroute=require("../../commerce/backend/routes/cartRoute")
-const  orderrouter=require("../../commerce/backend/routes/orderRoute")
+const  createcategory=require("./routes/categoryRoute")
+const  subcategory=require("./routes/subCategoryRoute")
+const  brandrouter=require("./routes/brandRoute")
+const  productroute=require("//routes/productRoute")
+const  userRoute=require("./routes/userRoute")
+const  authRouter=require("./routes/authRoute")
+const  reviewsrouter=require("./routes/reviewRoute")
+const  wishlistroute=require("./routes/wishlistRoute")
+const  coupounroute=require("./routes/couponRoute")
+const  adresroute=require("./routes/addressRoute")
+const  carteroute=require("./routes/cartRoute")
+const  orderrouter=require("./routes/orderRoute")
 
 
 
 
-const connectdb = require("./Config/connexion")
+const connectdb=require('./Config/connexion')
+
 
 
 connectdb();
 app.use(express.json())
 app.use(cors());
 app.use('/images', express.static('public/images'));
-const createcategory = require("./routes/categoryRoute")
-const subcategory = require("./routes/subCategoryRoute")
-const brandrouter = require("./routes/brandRoute")
-const productroute = require("./routes/productRoute")
-const userRoute = require("./routes/userRoute")
-const authRouter = require("./routes/authRoute")
-const reviewsrouter = require("./routes/reviewRoute")
-const wishlistroute = require("./routes/wishlistRoute")
-const coupounroute = require("./routes/couponRoute")
-const adresroute = require("./routes/addressRoute")
-const carteroute = require("./routes/cartRoute")
-const orderrouter = require("./routes/orderRoute")
+app.use('/api/v1/category',createcategory)
+app.use('/api/v1/subcategories',subcategory)
+
+app.use('/api/v1/brands',brandrouter)
+app.use('/api/v1/product',productroute)
+app.use('/api/v1/user',userRoute)
+app.use('/api/v1/auth',authRouter)
+app.use('/api/v1/reviews',reviewsrouter)
+app.use('/api/v1/wishlist',wishlistroute)
+app.use('/api/v1/addresses',adresroute)
+app.use('/api/v1/cart',carteroute)
+app.use('/api/v1/orders',orderrouter)
+
+app.use('/api/v1/coupons',coupounroute)
 
 
 
