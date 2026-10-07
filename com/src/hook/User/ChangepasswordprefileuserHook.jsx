@@ -18,7 +18,7 @@ const ChangepasswordprefileuserHook = () => {
         console.log("111111111111111")
         //   console.log("🔥 FRONTEND PUT", { name, phone, email });
 
- const changepasswordprefile=await fetch(`http://127.0.0.1:5000/api/v1/user/changeMyPassword`,
+ const changepasswordprefile=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/user/changeMyPassword`,
         {
             method:'PUT',
             headers:{

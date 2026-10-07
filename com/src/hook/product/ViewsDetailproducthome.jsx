@@ -9,7 +9,7 @@ const ViewsDetailproductHome = (id) => {
 
 
   try {
-     const detailproduct=await fetch(`http://127.0.0.1:5000/api/v1/product/${id}`,{
+     const detailproduct=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/product/${id}`,{
     method:'GET',
    });
    setloading(false)

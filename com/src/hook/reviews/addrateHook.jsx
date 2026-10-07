@@ -33,7 +33,7 @@ const {token}=Auth()
             notify("من فضلك ادخل  ستار")
             return;
           }
-        const reviewsdata=await  fetch(`http://localhost:5000/api/v1/product/${id}/reviews`,{
+        const reviewsdata=await  fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/product/${id}/reviews`,{
             method:'POST',
           
             headers:{
@@ -65,7 +65,7 @@ const {token}=Auth()
     }
 
     async function getreviews(idd){
-        const getrev=await fetch(`http://localhost:5000/api/v1/reviews/${idd}`,{
+        const getrev=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/reviews/${idd}`,{
             method:"GET"
         })
         const dataRev=await getrev.json();
@@ -77,7 +77,7 @@ const {token}=Auth()
         // console.log("getrev",dataRev.data._id)
     }
   async function editreviews(idd){
-    const editrev=await fetch(`http://localhost:5000/api/v1/reviews/${idd}`,{
+    const editrev=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/reviews/${idd}`,{
         method:'PUT',
         headers:{
             "Authorization":`Bearer ${localStorage.getItem("token")}`

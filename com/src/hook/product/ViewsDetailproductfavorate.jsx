@@ -7,7 +7,7 @@ const ViewsDetailproductfavorate = (id) => {
 
        if(!id)return;
   try {
-     const favorateproduct=await fetch(`http://127.0.0.1:5000/api/v1/product/?category=${id}`,{
+     const favorateproduct=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/product/?category=${id}`,{
     method:'GET',
     headers:{
       "Content-Type":"Application/json",

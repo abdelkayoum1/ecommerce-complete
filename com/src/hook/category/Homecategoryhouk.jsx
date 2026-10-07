@@ -8,7 +8,7 @@ const Homecategoryhouk = () => {
 
   async function getdata() {
    try {
-     const res = await fetch("http://127.0.0.1:5000/api/v1/category", {
+     const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
       method: "Get",
     });
     const data = await res.json();

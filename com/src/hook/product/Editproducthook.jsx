@@ -23,7 +23,7 @@ const Editproducthook = (id) => {
        const [selected, setselectedlist] = useState([]);
         async function getbrand() {
      try {
-       const res = await fetch("http://127.0.0.1:5000/api/v1/brands", {
+       const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/brands", {
          method: "Get",
        });
        const data = await res.json();
@@ -58,7 +58,7 @@ await getsubcategory(selectedidcategory);
    }
    async function getdata() {
      try {
-       const res = await fetch("http://127.0.0.1:5000/api/v1/category", {
+       const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
          method: "Get",
        });
        const data = await res.json();
@@ -71,7 +71,7 @@ await getsubcategory(selectedidcategory);
  
    async function getsubcategory(id) {
      const subresulta = await fetch(
-       `http://127.0.0.1:5000/api/v1/category/${id}/subcategories`,
+       `https://ecommerce-complete-kbe3.onrender.com/api/v1/category/${id}/subcategories`,
        {
          method: "Get",
          headers: {
@@ -116,7 +116,7 @@ await getsubcategory(selectedidcategory);
      async function getProduct() {
   try {
     const res = await fetch(
-      `http://127.0.0.1:5000/api/v1/product/${id}`
+      `https://ecommerce-complete-kbe3.onrender.com/api/v1/product/${id}`
     );
 
     const data = await res.json();
@@ -221,7 +221,7 @@ let imageitem = await Promise.all(
      try {
        setloading(true)
        console.log("before",loading)
-       const res = await fetch(`http://127.0.0.1:5000/api/v1/product/${id}`, {
+       const res = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/product/${id}`, {
          method: "PUT",
          body: formdata,
        

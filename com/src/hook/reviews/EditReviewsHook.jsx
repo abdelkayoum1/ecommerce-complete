@@ -30,7 +30,7 @@ useredit=JSON.parse(localStorage.getItem('user'));
       }
   async  function handleedit(id){
  try {
-     const reviewsedit= await  fetch(`http://localhost:5000/api/v1/reviews/${id}`,{
+     const reviewsedit= await  fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/reviews/${id}`,{
     method:'PUT',
     headers:{
         "Content-Type":'Application/json',

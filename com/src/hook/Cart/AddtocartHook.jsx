@@ -22,7 +22,7 @@ const AddtocartHook = ({dataproduct}) => {
 async function Gettocart() {
 
    
-    const Gettocart = await fetch("http://127.0.0.1:5000/api/v1/cart", {
+    const Gettocart = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/cart", {
       method: "GET",
       headers: {
         "Content-Type": "Application/json",
@@ -48,7 +48,7 @@ async function Gettocart() {
   async function Removeallcart(id) {
 
    
-    const removecarte = await fetch(`http://127.0.0.1:5000/api/v1/cart/${id}`, {
+    const removecarte = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/cart/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "Application/json",
@@ -78,7 +78,7 @@ async function Gettocart() {
    async function Deletecart() {
 
    
-    const deletecart = await fetch(`http://127.0.0.1:5000/api/v1/cart`, {
+    const deletecart = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/cart`, {
       method: "DELETE",
       headers: {
         "Content-Type": "Application/json",
@@ -103,7 +103,7 @@ async function Gettocart() {
  
 
     
-     const updatecoupon = await fetch(`http://127.0.0.1:5000/api/v1/cart/applyCoupon`, {
+     const updatecoupon = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/cart/applyCoupon`, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
@@ -137,7 +137,7 @@ async function Gettocart() {
  
 
     
-     const updatecartitem = await fetch(`http://127.0.0.1:5000/api/v1/cart/${id}`, {
+     const updatecartitem = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/cart/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
@@ -198,7 +198,7 @@ console.log(hashcolor)
     setselectcolor("")
    }
  
-    const addtocart = await fetch("http://127.0.0.1:5000/api/v1/cart", {
+    const addtocart = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/cart", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",

@@ -22,8 +22,8 @@ const Getallreviewsfavorate = () => {
     setdatafav(data.data.map((item)=>{
       return({
         ...item,
-        imageCover:`http://localhost:5000/images/${item.imageCover}`,
-        image:item.images.map(img => `http://localhost:5000/images/${img}`)
+        imageCover:`https://ecommerce-complete-kbe3.onrender.com/images/${item.imageCover}`,
+        image:item.images.map(img => `https://ecommerce-complete-kbe3.onrender.com/images/${img}`)
       })
       
     }))

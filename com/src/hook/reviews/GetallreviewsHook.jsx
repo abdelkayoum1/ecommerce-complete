@@ -9,7 +9,7 @@ let limit=2
     async function getallreviews(page=1){
 
      try {
-          const getreviews =await fetch(`http://localhost:5000/api/v1/product/${id}/reviews?page=${page}&limit=${limit}`,{
+          const getreviews =await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/product/${id}/reviews?page=${page}&limit=${limit}`,{
 
         method:'GET',
         headers:{

@@ -19,7 +19,7 @@ user=JSON.parse(localStorage.getItem('user'));
       const handleShow = () => setShow(true);
   async  function handleremove(id){
  try {
-     const reviewsdelete= await  fetch(`http://localhost:5000/api/v1/reviews/${id}`,{
+     const reviewsdelete= await  fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/reviews/${id}`,{
     method:'DELETE',
     headers:{
         'Authorization':`Bearer ${token}`

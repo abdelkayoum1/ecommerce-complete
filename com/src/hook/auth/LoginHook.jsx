@@ -33,7 +33,7 @@ const LoginHook = () => {
       }
       try {
         setloading(true)
-        const res = await fetch(`http://localhost:5000/api/v1/auth/login`, {
+        const res = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/auth/login`, {
           method: "POST",
           headers: {
             "Content-type": "Application/json",

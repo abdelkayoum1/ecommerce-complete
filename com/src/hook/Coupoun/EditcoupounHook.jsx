@@ -8,7 +8,7 @@ const EditcoupounHook = () => {
   async function Editcoupoun(id,name,expire,discount) {
  
   
-      const crtcoupn = await fetch(`http://localhost:5000/api/v1/coupons/${id}`, {
+      const crtcoupn = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "Application/json",
@@ -40,7 +40,7 @@ console.log('bda')
           async function GetoneCoupoun(id) {
  
   
-      const crtcoupn = await fetch(`http://localhost:5000/api/v1/coupons/${id}`, {
+      const crtcoupn = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons/${id}`, {
         method: "Get",
         headers: {
           "Content-Type": "Application/json",

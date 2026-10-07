@@ -37,7 +37,7 @@ const addproducthook = () => {
    }
    async function getbrand() {
      try {
-       const res = await fetch("http://127.0.0.1:5000/api/v1/brands", {
+       const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/brands", {
          method: "Get",
        });
        const data = await res.json();
@@ -50,7 +50,7 @@ const addproducthook = () => {
  
    async function getdata() {
      try {
-       const res = await fetch("http://127.0.0.1:5000/api/v1/category", {
+       const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
          method: "Get",
        });
        const data = await res.json();
@@ -64,7 +64,7 @@ const addproducthook = () => {
  
    async function getsubcategory(id) {
      const subresulta = await fetch(
-       `http://127.0.0.1:5000/api/v1/category/${id}/subcategories`,
+       `https://ecommerce-complete-kbe3.onrender.com/api/v1/category/${id}/subcategories`,
        {
          method: "Get",
          headers: {
@@ -140,7 +140,7 @@ const addproducthook = () => {
      try {
        setloading(true)
        console.log("before",loading)
-       const res = await fetch("http://127.0.0.1:5000/api/v1/product", {
+       const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/product", {
          method: "POST",
          body: formdata,
          headers:{

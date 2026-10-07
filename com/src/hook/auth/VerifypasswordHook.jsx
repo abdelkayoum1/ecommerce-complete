@@ -6,7 +6,7 @@ const VerifypasswordHook = () => {
     const [resetCode,setresetcode]=useState("");
     async function verifypassword(){
      try {
-         const verifypasswor= await  fetch("http://localhost:5000/api/v1/auth/verifyResetCode",{
+         const verifypasswor= await  fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/auth/verifyResetCode",{
         method:"POST",
         headers:{
             

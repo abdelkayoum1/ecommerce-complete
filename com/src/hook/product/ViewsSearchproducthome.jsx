@@ -10,7 +10,7 @@ const ViewsSearchproductHome = () => {
 
 
   try {
-     const prod=await fetch('http://127.0.0.1:5000/api/v1/product',{
+     const prod=await fetch('https://ecommerce-complete-kbe3.onrender.com/api/v1/product',{
     method:'GET',
    });
    const data=await prod.json();
@@ -27,7 +27,7 @@ const ViewsSearchproductHome = () => {
   async function getdataproductsearch(queryString) {
   try {
     const prod = await fetch(
-      `http://127.0.0.1:5000/api/v1/product?${queryString}`,
+      `https://ecommerce-complete-kbe3.onrender.com/api/v1/product?${queryString}`,
       {
         method: 'GET',
       }

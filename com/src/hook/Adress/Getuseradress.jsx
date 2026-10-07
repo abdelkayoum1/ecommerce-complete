@@ -5,7 +5,7 @@ const Getuseradress = () => {
   const [getuserdata,setgetuserdata]=useState("")
 
     async  function  getuseradresse(){
-        const getuseradr=await fetch("http://127.0.0.1:5000/api/v1/addresses",{
+        const getuseradr=await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/addresses",{
             method:'GET',
             headers:{
                 "Content-Type":"Application/json",

@@ -9,7 +9,7 @@ const ResetpasswordHook = () => {
 
     async function changepassword(){
      try {
-         const resetpassword= await  fetch("http://localhost:5000/api/v1/auth/resetPassword",{
+         const resetpassword= await  fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/auth/resetPassword",{
         method:"PUt",
         headers:{
             

@@ -15,7 +15,7 @@ const userAddadressesHook = () => {
     async function adduseradres(){
 
      try {
-      const adduser=await fetch(`http://127.0.0.1:5000/api/v1/addresses`,
+      const adduser=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/addresses`,
         {
             method:'POST',
             headers:{
@@ -56,7 +56,7 @@ city:city,postalCode:postalcode
 }
 
 async function getalladress(){
-    const getalladres=await fetch(`http://127.0.0.1:5000/api/v1/addresses`,
+    const getalladres=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/addresses`,
         {
             method:'GET',
             headers:{

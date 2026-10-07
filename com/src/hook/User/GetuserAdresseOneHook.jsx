@@ -11,7 +11,7 @@ const GetuserAdresseOneHook = () => {
     const[postalCode,setcodepostal]=useState("")
 async function EditadresseuserOne(id,alias,details,phone,city,postalCode){
     console.log("1111111111")
- const EdituseradreOne=await fetch(`http://127.0.0.1:5000/api/v1/addresses/${id}`,
+ const EdituseradreOne=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/addresses/${id}`,
         {
             method:'PUT',
             headers:{
@@ -52,7 +52,7 @@ async function EditadresseuserOne(id,alias,details,phone,city,postalCode){
 //    console.log("getuseradresseone",data.data) 
    }
     async function getuseradressOne(id){
- const getuseradresseone=await fetch(`http://127.0.0.1:5000/api/v1/addresses/${id}`,
+ const getuseradresseone=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/addresses/${id}`,
         {
             method:'GET',
             headers:{

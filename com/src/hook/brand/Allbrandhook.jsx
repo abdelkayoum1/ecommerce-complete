@@ -9,7 +9,7 @@ const Allbrandhook = () => {
   async function getbrand(page=1) {
     try {
       const res = await fetch(
-        `http://127.0.0.1:5000/api/v1/brands?limit=3&page=${page}`,
+        `https://ecommerce-complete-kbe3.onrender.com/api/v1/brands?limit=3&page=${page}`,
         {
           method: "Get",
         },

@@ -21,7 +21,7 @@ const CreateCouponHook = () => {
         return;
       }
   
-      const crtcoupn = await fetch("http://localhost:5000/api/v1/coupons", {
+      const crtcoupn = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
@@ -52,7 +52,7 @@ const CreateCouponHook = () => {
      async function Updatecoupoun(id,name,expire,discount) {
     
   
-      const crtcoupn = await fetch(`http://localhost:5000/api/v1/coupons/${id}`, {
+      const crtcoupn = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "Application/json",
@@ -77,7 +77,7 @@ const CreateCouponHook = () => {
        async function getallcpoupn(page=1) {
   
 
-    const crtcoupn = await fetch(`http://localhost:5000/api/v1/coupons?limit=2&page=${page}`, {
+    const crtcoupn = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons?limit=2&page=${page}`, {
       method: "GET",
       headers: {
         "Content-Type": "Application/json",
@@ -93,7 +93,7 @@ const CreateCouponHook = () => {
     // console.log("allcpn",data)
   }
     async   function deletecoupoun(id){
-             const deletecoupounone = await fetch(`http://localhost:5000/api/v1/coupons/${id}`, {
+             const deletecoupounone = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons/${id}`, {
         method: "Delete",
         headers: {
           "Content-Type": "Application/json",

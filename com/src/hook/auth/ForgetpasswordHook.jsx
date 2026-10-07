@@ -6,7 +6,7 @@ const ForgetpasswordHook = () => {
     const [email,setemail]=useState();
     async function forgetpassword(){
      try {
-         const forgetpass= await  fetch("http://localhost:5000/api/v1/auth/forgotPasswords",{
+         const forgetpass= await  fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/auth/forgotPasswords",{
         method:"POST",
         headers:{
             

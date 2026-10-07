@@ -7,7 +7,7 @@ const Homebrandhook = () => {
 
   async function getdata() {
    try {
-     const res = await fetch("http://127.0.0.1:5000/api/v1/brands", {
+     const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/brands", {
       method: "Get",
     });
     const data = await res.json();
