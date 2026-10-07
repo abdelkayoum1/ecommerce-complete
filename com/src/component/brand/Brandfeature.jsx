@@ -20,7 +20,7 @@ const Brandfeature = ({title,btntitle}) => {
 
 
       { loading?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box> :dataa.slice(0,4).map((item,index)=> { return dataa.length>0 ? (
-                     <Brandcard  key={index}  img={`http://https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`}  />
+                     <Brandcard  key={index}  img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`}  />
                    ) : <h4>لاتوجد  منتجات</h4>})}
         
                

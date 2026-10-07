@@ -38,7 +38,7 @@ const HomePage = ({dataproduct,favid,setfavid,datafav,setdatafav}) => {
               <ProductCard  img={Mobile1}/>
 
        <ProductCard img={Mobile2}/> */}
-<Cardproductcontainer favid={favid} datafav={datafav} setdatafav={setdatafav} setfavid={setfavid} da product={dataproduct} title='المزيد'  btntitle='الاكثر  مبيعا'  path='/products' />
+<Cardproductcontainer favid={favid} datafav={datafav} setdatafav={setdatafav} setfavid={setfavid}  product={dataproduct} title='المزيد'  btntitle='الاكثر  مبيعا'  path='/products' />
 <Discount/>
 <Cardproductcontainer favid={favid} datafav={datafav} setdatafav={setdatafav} setfavid={setfavid} product={dataproduct} title='المزيد'  btntitle='الاكثر  تقيما'   path='/products'/>
 < Brandfeature  title='المزيد'  btntitle='الماركات'  />
