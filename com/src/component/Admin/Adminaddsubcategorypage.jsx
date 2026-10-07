@@ -14,7 +14,7 @@ const Adminaddsubcategorypage = () => {
     
       async function getdata() {
        try {
-         const res = await fetch("http://127.0.0.1:5000/api/v1/category", {
+         const res = await fetch("http://https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
           method: "Get",
         });
         const data = await res.json();
@@ -48,7 +48,7 @@ const Adminaddsubcategorypage = () => {
         return;
       }
          try {
-         let res = await fetch("http://127.0.0.1:5000/api/v1/subcategories", {
+         let res = await fetch("http://https://ecommerce-complete-kbe3.onrender.com/api/v1/subcategories", {
           method: "Post",
           body:JSON.stringify({
             
