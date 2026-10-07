@@ -18,14 +18,14 @@ const AllBrand = () => {
         <Box  sx={{display:'flex',justifyContent:'center',flexWrap:'wrap', gap:2}}>   
 
      {loadingbrand ? (cptpagebrand>1 ? (  dataa.map((item,index)=>{
-      return (<Brandcard  key={index}  img={`http://127.0.0.1:5000/images/${item.image}`}/>)
+      return (<Brandcard  key={index}  img={`http://https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`}/>)
      })     
 ):null):null} 
 
      
 
      { loadingbrand?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box> :dataabrand.map((item,index)=> { return dataabrand.length>0 ? (
-                     <Brandcard  key={index} title={item.name} img={`http://127.0.0.1:5000/images/${item.image}`}  />
+                     <Brandcard  key={index} title={item.name} img={`http://https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`}  />
                    ) : <h4>لاتوجد  منتجات</h4>})}
     </Box>
          <Paginationn  pageCount={cptpagebrand}  onpress={getdatabrand}/>
