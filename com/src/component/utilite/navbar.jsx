@@ -97,7 +97,7 @@ export default function Navbare({ products,datasearch,datacart }) {
   </div>
 </div>
             ) : (
-              <Typography> دخول</Typography>
+              <Typography  sx={{cursor:'pointer'}}  onClick={()=>navigate("/sign")}> دخول</Typography>
             )}
 
             <IconButton color="inherit">
