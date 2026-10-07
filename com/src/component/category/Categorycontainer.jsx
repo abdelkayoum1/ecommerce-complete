@@ -15,7 +15,7 @@ const Categorycontainer = ({data,loading}) => {
     const color=["#FFD3E8","#F4DB45","#55CFDF","#FF6262","#0034ff","#FFD3E8"]
     const [dataa, setdata] = useState([]);
     async function getdata() {
-      const res = await fetch("http://127.0.0.1:5000/api/v1/category", {
+      const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
         method: "Get",
       });
       const data = await res.json();
@@ -43,7 +43,7 @@ const Categorycontainer = ({data,loading}) => {
     
   }}>
      { loading?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box> :data.map((item,index)=> { return dataa.length>0 ? (
-                <CategoryCard  key={index} title={item.name} img={`http://127.0.0.1:5000/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
+                <CategoryCard  key={index} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
               ) : <h4>لاتوجد  منتجات</h4>})}
    
           
