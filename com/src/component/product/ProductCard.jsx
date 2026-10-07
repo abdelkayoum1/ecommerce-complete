@@ -53,7 +53,7 @@ const[valid,setvalid]=useState(isfav)
       
     try {
      
-        const addwishliste=await fetch('http://127.0.0.1:5000/api/v1/wishlist',{
+        const addwishliste=await fetch('https://ecommerce-complete-kbe3.onrender.com/api/v1/wishlist',{
       method:'POST',
       headers:{
         "Content-Type":'Application/json',
@@ -113,7 +113,7 @@ const[valid,setvalid]=useState(isfav)
   },[datafav])
   async function  removetowishlist(id){
 
-    const removewishlist=await fetch(`http://127.0.0.1:5000/api/v1/wishlist/${id}`,{
+    const removewishlist=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/wishlist/${id}`,{
       method:'Delete',
       headers:{
         "Content-Type":'Application/json',

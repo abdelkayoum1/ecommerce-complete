@@ -21,7 +21,7 @@ const HomeCatgory = () => {
     direction:'rtl'}}
         >
          { loading? <Box  sx={{display:'flex',width:'100%',justifyContent:"center",alignItems:'center'}}>  <Spinner animation="border"   variant="primary" /></Box>:  dataa.slice(0,5).map((item,index)=> { return dataa.length>0 ? (
-            <CategoryCard  key={index} title={item.name} img={`http://127.0.0.1:5000/images/${item.image}`} background={color[index]} />
+            <CategoryCard  key={index} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[index]} />
           ) : <h4>لاتوجد بيانات</h4> })}
           {/* <CategoryCard  title="تخفيضات"  img={Cat}  background='#F4DBA4'/>
        <CategoryCard  title="تخفيضات"  img={Laptop}  background='#0034FF'/>
