@@ -7,7 +7,7 @@ const Getallreviewsfavorate = () => {
  async function getallreviews(){
       console.log("🔥 GET wishlist START");
 
-   const getreviews=await  fetch("http://127.0.0.1:5000/api/v1/wishlist",{
+   const getreviews=await  fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/wishlist",{
      method:'GET',
      headers:{
        "Content-Type":'Application.json',
