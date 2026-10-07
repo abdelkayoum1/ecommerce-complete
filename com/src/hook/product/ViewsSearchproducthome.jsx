@@ -47,7 +47,7 @@ const ViewsSearchproductHome = () => {
 let limit=4;
   async function getdatasearch(page=1){
     let word,catchecked="",pricefrom="",priceto="",pricetostrin="",pricefromstring="";
-    word=localStorage.getItem('searchword')
+    word=localStorage.getItem('searchword')|| "";
       // console.log("CAT CHECKED =", localStorage.getItem("catchecked"));
 
     if(localStorage.getItem("catchecked")){
