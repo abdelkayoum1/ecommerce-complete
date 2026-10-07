@@ -103,7 +103,7 @@ let limit=4;
   }
   useEffect(()=>{
     // getdataproduct();
-    getdatasearch(1);
+    getdatasearch();
   },[])
 
   
