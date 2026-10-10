@@ -14,7 +14,7 @@ const [results,setresullts]=useState("");
 
     async function Crateodrer(id,details,phone,city,postalCode){
 
-        const crtorder=await fetch(`http://127.0.0.1:5000/api/v1/orders/${id}`,{
+        const crtorder=await fetch(`https://ecommerce-complete-ten.vercel.app/api/v1/orders/${id}`,{
             method:'POST',
             headers:{
                 "Content-Type":"Application/json",
