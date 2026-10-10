@@ -14,7 +14,7 @@ const Userorderitem = ({getorder}) => {
         sx={{ display: "flex", alignItems: "center",gap:5, justifyContent: "start" }}
       >
        <Link to={`/products/${getorder.product._id}`}>
-        <img src={ `http://localhost:5000/images/${getorder.product.imageCover}`} alt="" width="100px" />
+        <img src={ `https://ecommerce-complete-ten.vercel.app/images/${getorder.product.imageCover}`} alt="" width="100px" />
        </Link>
 
         <Box>
