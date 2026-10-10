@@ -129,7 +129,7 @@ function App() {
                         <Route path="/admin/addcoupoun" element={<Adminaddcoupounpage />} />
 
             <Route path="/admin/addproduct/:id" element={<AdminAddproduct />} />
-            <Route path="/user/allorder" element={<Userallorder />} />
+            <Route path="https://ecommerce-complete-kbe3.onrender.com/user/allorder" element={<Userallorder />} />
             <Route
               path="/user/favorate"
               element={
