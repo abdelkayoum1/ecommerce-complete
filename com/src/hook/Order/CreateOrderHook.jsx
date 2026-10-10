@@ -40,7 +40,7 @@ const [results,setresullts]=useState("");
 
  async function Getorder(){
 
-        const getordere=await fetch(`http://127.0.0.1:5000/api/v1/orders`,{
+        const getordere=await fetch(`https://ecommerce-complete-ten.vercel.app/api/v1/orders`,{
             method:'GET',
             headers:{
                 "Content-Type":"Application/json",
