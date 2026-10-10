@@ -14,7 +14,7 @@ const [results,setresullts]=useState("");
 
     async function Crateodrer(id,details,phone,city,postalCode){
 
-        const crtorder=await fetch(`https://ecommerce-complete-ten.vercel.app/api/v1/orders/${id}`,{
+        const crtorder=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders/${id}`,{
             method:'POST',
             headers:{
                 "Content-Type":"Application/json",
@@ -40,7 +40,7 @@ const [results,setresullts]=useState("");
 
  async function Getorder(){
 
-        const getordere=await fetch(`https://ecommerce-complete-ten.vercel.app/api/v1/orders`,{
+        const getordere=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders`,{
             method:'GET',
             headers:{
                 "Content-Type":"Application/json",
