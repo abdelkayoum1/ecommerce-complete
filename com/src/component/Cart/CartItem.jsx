@@ -29,7 +29,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
     return (
         <Container  sx={{borderRadius:'10px',height:'180px',background:'rgb(204, 202, 206)',marginRight:'5px'}}>
         <Col xs="12" className="cart-item-body my-2 d-flex px-2" style={{gap:'20px'}}>
-        <img width="160px" height="140px" src={`http://localhost:5000/images/${datacart.product.imageCover}`} style={{objectFit:'fill',marginTop:'5px',borderRadius:'5px'}} alt="" />
+        <img width="160px" height="140px" src={`https://ecommerce-complete-kbe3.onrender.com/images/${datacart.product.imageCover}`} style={{objectFit:'fill',marginTop:'5px',borderRadius:'5px'}} alt="" />
         <div className="w-100">
           <Row className="justify-content-between">
             <Col sm="12" className=" d-flex flex-row justify-content-between">

@@ -113,7 +113,7 @@ function App() {
             />
             <Route path="/products/:id" element={<ProductDetailPage Gettocart={Gettocart} changecolor={changecolor}  addtocarte={addtocarte} indexcolor={indexcolor} color={color}/>} />
             <Route path="/cart" element={<Cartepage  setproducts={setproducts} isvalid={isvalid} products={products} settotalAfterDiscount={settotalAfterDiscount} totalAfterDiscount={totalAfterDiscount} coupon={coupon} setcoupoun={setcoupoun} Updatecoupon={Updatecoupon} Updatecarteitem={Updatecarteitem} setcount={setcount} count={count} Deletecart={Deletecart} setdatacart={setdatacart} Removeallcart={Removeallcart}  Gettocarte={Gettocart}  datacart={datacart}/>} />
-            <Route path="/order/pyment" element={<Pyment />} />
+            <Route path="/order/pyment" element={<Pyment   datacart={datacart}/>} />
             <Route path="/admin/allproducts" element={<AdminAllproduct />} />
             <Route path="/admin/allorder" element={<AdminAllorder />} />
             <Route path="/admin/order/:id" element={<Adminorderdetailpage />} />

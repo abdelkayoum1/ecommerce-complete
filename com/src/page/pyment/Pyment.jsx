@@ -1,24 +1,65 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography'
 import Radio from '@mui/material/Radio'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button'
 import Getuseradress from '../../hook/Adress/Getuseradress';
+import GetuserAdresseOneHook from '../../hook/User/GetuserAdresseOneHook';
+import { useParams } from 'react-router-dom';
+import CreateOrderHook from '../../hook/Order/CreateOrderHook';
+import notify from '../../hook/useNotification';
+import { ToastContainer } from 'react-toastify';
 
 
-const Pyment = () => {
+const Pyment = ({datacart}) => {
   const [getuseradresse,getuserdata]=Getuseradress();
   // console.log(getuserdata[0]._id)
+  console.log(datacart)
+
+  const [data,setdata]=useState({});
+    const [dataid,setdataid]=useState("");
 
  useEffect(()=>{
   getuseradresse()
  },[])
-
-   function  handleadresse(e){
+const [Crateodrer]=CreateOrderHook();
+ async  function  handleadresse(e){
   console.log("hih")
   console.log(e.target.value)
+      setdataid(e.target.value)
+   const resultat=await getuseradressOne(e.target.value)
+   setdata(resultat)
+
+
  }
+
+   async function createorder(){
+   if(dataid===""){
+    notify("من فضلك اختار  عنوان","warn")
+  return;
+   }
+       await Crateodrer(datacart._id,data.details,data.phone,data.city,data.postalCode)
+   }
+//  console.log(data._id)
+
+   const [
+     getuseradressOne,
+     EditadresseuserOne,
+     alias,
+     
+     details,
+     phone,
+     city,
+     postalCode,
+     setalias,
+     setdetails,
+     setphone,
+     setcity,
+     setcodepostal,
+   ] = GetuserAdresseOneHook();
+ 
+  
   return (
     <>
     <div>
@@ -40,7 +81,7 @@ const Pyment = () => {
                     <Typography>الدفع عند الاستسلام </Typography>
                 </Box>
 
- <select name="" onChange={handleadresse} style={{ width:"50%",position:'absolute',right:"30px"}}>
+ <select name="" value={dataid} onChange={handleadresse} style={{ width:"50%",position:'absolute',right:"80px"}}>
 <option value="0"  >اختر العنوان</option>
   {getuserdata  && getuserdata.length>0?
   (getuserdata.map((item)=>{
@@ -64,11 +105,12 @@ const Pyment = () => {
     direction:'ltr'
   }}>
 
-             <Button  variant='contained'  >اتمام الشراء</Button>
-                            <div className="product-price d-inline  my-3  border"  style={{background:'white',padding:'5px',borderRadius:'5px',textAlign:'center'}}>34000 جنية</div>
+             <Button  variant='contained'  onClick={createorder}>اتمام الشراء</Button>
+                            <div className="product-price d-inline  my-3  border"  style={{background:'white',padding:'5px',borderRadius:'5px',textAlign:'center'}}>{datacart.totalCartPrice} جنية</div>
            </Box>
 
         </Container>
+        <ToastContainer/>
     </div>
     </>
   )

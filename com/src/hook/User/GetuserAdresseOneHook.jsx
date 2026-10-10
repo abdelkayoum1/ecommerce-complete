@@ -65,12 +65,14 @@ async function EditadresseuserOne(id,alias,details,phone,city,postalCode){
 
      )
              const data=await getuseradresseone.json();
+             console.log(data.data)
              setalias(data.data.alias)
              setdetails(data.data.details)
              setphone(data.data.phone)
              setcity(data.data.city)
              setcodepostal(data.data.postalCode)
             //  setadresuser(data.data)
+            return data.data;
    }
     return [getuseradressOne,EditadresseuserOne,alias,details,phone,city,postalCode,setalias,setdetails,setphone,setcity,setcodepostal];
 }

@@ -3,29 +3,38 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import mobile from "../../assets/mobile1.png";
+import { Link } from 'react-router-dom';
 
-const Userorderitem = () => {
+const Userorderitem = ({getorder}) => {
+
+  console.log(getorder.product.imageCover)
   return (
 <>
   <Box
         sx={{ display: "flex", alignItems: "center",gap:5, justifyContent: "start" }}
       >
-        <img src={mobile} alt="" width="100px" />
+       <Link to={`/products/${getorder.product._id}`}>
+        <img src={ `http://localhost:5000/images/${getorder.product.imageCover}`} alt="" width="100px" />
+       </Link>
 
         <Box>
           <Typography  sx={{color:'grey'}}>
-            آيفون XR بذاكرة سعة 128 جيجابايت ويدعم تقنية 4G LTE مع تطبيق فيس
+     {getorder.product.title}
           </Typography>
           <Box  sx={{display:'flex',gap:2}}>
             <Typography sx={{color:'grey'}}>احمر</Typography>
-             <Typography sx={{color:'wheat'}}>4,5</Typography>
-              <Typography sx={{color:'grey'}}>(160تقييم)</Typography>
+             <Typography sx={{color:'wheat'}}>{getorder.product.ratingsAverage ||0}</Typography>
+              <Typography sx={{color:'grey'}}>{ `${getorder.product.ratingsQuantity} تقييم`}</Typography>
           </Box>
 
            <Box  sx={{display:'flex',gap:2,marginTop:'10px'}}>
             <Typography sx={{color:'grey'}}>الكمية</Typography>
-            <input type="number"  style={{width:'10%',height:'20px'}} />
+            <input type="number"value={getorder.count}  style={{width:'20%',height:'20px'}} />
           </Box>
+          <div className="box"  style={{width:'12%', height:"30px", background:getorder.color, borderRadius:'70%'}}>
+
+
+          </div>
         </Box>
       </Box>
 
