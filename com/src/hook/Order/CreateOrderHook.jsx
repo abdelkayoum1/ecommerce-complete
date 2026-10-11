@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import notify from '../useNotification';
+import { useNavigate } from 'react-router-dom';
 
 const CreateOrderHook = () => {
  
@@ -7,6 +8,7 @@ const CreateOrderHook = () => {
 
 
 const [getorder,setgetorder]=useState([]);
+const navigate=useNavigate()
 
 const [paginate,setpaginate]=useState({});
 
@@ -32,15 +34,18 @@ const [results,setresullts]=useState("");
    console.log(crtorder)
         if(crtorder && crtorder.status==="status"){
             notify("تمت انشاء طلبك بنجاح","success")
+           setTimeout(()=>{
+     navigate("/user/allorder")
+           },1500)
         }
         const data=await crtorder.json();
         console.log(data)
     }
 
 
- async function Getorder(){
+ async function Getorder(page=1){
 
-        const getordere=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders`,{
+        const getordere=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders?limit=4&page=${page}`,{
             method:'GET',
             headers:{
                 "Content-Type":"Application/json",

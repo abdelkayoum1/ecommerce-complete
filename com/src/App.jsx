@@ -41,6 +41,7 @@ import Adminaddcoupounpage from "./page/admin/Adminaddcoupounpage";
 import userAddadressesHook from "./hook/User/userAddadressesHook";
 import AddtocartHook from "./hook/Cart/AddtocartHook";
 import { useEffect } from "react";
+import CreateOrderHook from "./hook/Order/CreateOrderHook";
 
 function App() {
   const [
@@ -55,7 +56,7 @@ function App() {
       // const [getalladress,adduseradres,adressuser,setadresuser,home,details,phone,city,postalcode,setcodepostal,setcity,setphone,setdetails,sethome]=userAddadressesHook();
     
  const [isvalid,setproducts,products,settotalAfterDiscount,totalAfterDiscount,coupon,setcoupoun,Updatecoupon,changecolor,addtocarte,indexcolor,color,datacart,Gettocart,Removeallcart,setdatacart,Deletecart,count,setcount,Updatecarteitem]=AddtocartHook({dataproduct});
- 
+ const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
  useEffect(()=>{
   Gettocart()
  },[])
@@ -115,8 +116,8 @@ function App() {
             <Route path="/cart" element={<Cartepage  setproducts={setproducts} isvalid={isvalid} products={products} settotalAfterDiscount={settotalAfterDiscount} totalAfterDiscount={totalAfterDiscount} coupon={coupon} setcoupoun={setcoupoun} Updatecoupon={Updatecoupon} Updatecarteitem={Updatecarteitem} setcount={setcount} count={count} Deletecart={Deletecart} setdatacart={setdatacart} Removeallcart={Removeallcart}  Gettocarte={Gettocart}  datacart={datacart}/>} />
             <Route path="/order/pyment" element={<Pyment   datacart={datacart}/>} />
             <Route path="/admin/allproducts" element={<AdminAllproduct />} />
-            <Route path="/admin/allorder" element={<AdminAllorder />} />
-            <Route path="/admin/order/:id" element={<Adminorderdetailpage />} />
+            <Route path="/admin/allorder" element={<AdminAllorder  Getorder={Getorder} results={results} paginate={paginate}   getorder={getorder} />} />
+            <Route path="/admin/allorder/:id" element={<Adminorderdetailpage />} />
 
             <Route path="/admin/addbrand" element={<Adminaddbrans />} />
 
@@ -129,7 +130,7 @@ function App() {
                         <Route path="/admin/addcoupoun" element={<Adminaddcoupounpage />} />
 
             <Route path="/admin/addproduct/:id" element={<AdminAddproduct />} />
-            <Route path="/user/allorder" element={<Userallorder />} />
+            <Route path="/user/allorder" element={<Userallorder  Getorder={Getorder} results={results}   getorder={getorder}/>} />
             <Route
               path="/user/favorate"
               element={

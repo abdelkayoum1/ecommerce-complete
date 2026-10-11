@@ -30,7 +30,7 @@ const Adminorderdetailpage = () => {
           minWidth: 0,
         }}
       >
-         <Box  sx={{direction:'rtl'}}>  ادارة التفاصيل رقم  #123</Box>
+         
         <Adminorderdetail />
        
       </Col>

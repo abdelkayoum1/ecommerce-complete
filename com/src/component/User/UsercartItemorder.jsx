@@ -14,11 +14,11 @@ const UsercartItemorder = ({getorder,results}) => {
   return (
     <>
           
-            <Box  sx={{background:'white',marginBottom:'5px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
-               <Box className="div"  sx={{color:'black',fontWeight:'bold'}}> طلب رقم #1234</Box>
+            <Box  sx={{background:'white',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
+               <Box className="div"  sx={{color:'black',fontWeight:'bold'}}>   تم بتاريخ  {new Date(getorder.createdAt).toLocaleDateString("fr-FR")}</Box>
     
 
-     {getorder && getorder.cartItems.length>0? (
+     {getorder && getorder.cartItems?.length>0? (
       getorder.cartItems.map((item)=>{
     return (<Userorderitem getorder={item}  key={item._id}   results={results}/>)
       })

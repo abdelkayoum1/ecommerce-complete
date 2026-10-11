@@ -10,7 +10,7 @@ import Useralloarderpage from "../../page/User/Useralloarderpage";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const Userallorder = () => {
+const Userallorder = ({getorder,results,Getorder}) => {
   return (
     <Row
       style={{
@@ -33,7 +33,7 @@ const Userallorder = () => {
           minWidth: 0,
         }}
       >
-       <Useralloarderpage/>
+       <Useralloarderpage Getorder={Getorder}  results={results}  getorder={getorder}/>
        
       </Col>
      

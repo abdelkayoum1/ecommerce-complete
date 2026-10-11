@@ -8,13 +8,15 @@ import Typography from "@mui/material/Typography";
 import Getuseradress from "../../hook/Adress/Getuseradress";
 import CreateOrderHook from "../../hook/Order/CreateOrderHook";
 
-const Useralloarderpage = () => {
+const Useralloarderpage = ({getorder,results,Getorder}) => {
   // const [getuseradresse,getuserdata]=Getuseradress();
 
   // useEffect(()=>{
-    const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
+    // const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
 
-    console.log(getorder)
+    let user;
+
+    user=JSON.parse(localStorage.getItem("user"))
 useEffect(()=>{
   Getorder()
 },[])
@@ -31,7 +33,7 @@ useEffect(()=>{
           style={{ marginTop: "5px", fontSize: "20px", fontWeight: "inherit" }}
         >
           {" "}
-          اهلا محمد
+        {user.name}
         </div>
                  {getorder && getorder.length>0 ? (
                   getorder.map((item)=>{

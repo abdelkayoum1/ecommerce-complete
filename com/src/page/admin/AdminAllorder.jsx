@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AdminAllorder from "../../component/Admin/AdminaAllOrderpage";
 import {Row ,Col} from 'react-bootstrap';
 import AdminSidebar from "../../component/Admin/AdminSidebar";
@@ -7,7 +7,12 @@ import Admindetailperson from "../../component/Admin/Admindetailperson";
 import Paginationn from '../../component/utilite/Pagination';
 import Box from '@mui/material/Box';
 
-const AdminAllorderpage = () => {
+const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
+  console.log(getorder)
+
+  useEffect(()=>{
+    Getorder();
+  },[])
   return (
     <>
     
@@ -31,12 +36,16 @@ const AdminAllorderpage = () => {
           minWidth: 0,
         }}
       >
-         <Box  sx={{direction:'rtl'}}>  ادارة الطلبيات</Box>
-        <AdminAllorder />
-        <AdminAllorder />
-        <AdminAllorder />
-        <Admindetailperson/>
-        <Paginationn/>
+         <div  className='barnd-text' style={{direction:'rtl',fontWeight:'bold', fontSize:'24px'}}>  ادارة الطلبيات</div>
+       {getorder&&  getorder.length>0? (
+        getorder.map((item)=>{
+          return ( <AdminAllorder  item={item}   />)
+        })
+       ):null}
+        {/* <AdminAllorder />
+        <AdminAllorder /> */}
+        {/* <Admindetailperson  /> */}
+        <Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate.numberOfPages}/>
       </Col>
     </Row>
     </>

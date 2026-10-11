@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Useradressitem from "../User/Useradressitem";
 import { Typography } from "@mui/material";
 import deleteicon from "../../assets/delete.png";
+
 import DeleteCouponHook from "../../hook/Coupoun/DeleteCouponHook";
 import { Button, Modal } from "react-bootstrap";
 import EditcoupounHook from "../../hook/Coupoun/EditcoupounHook";
@@ -31,7 +32,7 @@ const AdmincoupnCard = ({
 
   //        const[discount,setdiscount]=useState(allcpnsitem.discount)
 
-  const handleClose = () => setShowEdit(false);
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleCloseEdit = () => setShowEdit(false);
   const handleShowEdit = () => setShowEdit(true);
