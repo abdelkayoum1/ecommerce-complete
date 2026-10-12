@@ -168,6 +168,10 @@ color: white;
 z-index: auto !important;
 }
 
+.img{
+    width: 40px;
+}
+
   .sidebar-desktop {
     display: none;
   }

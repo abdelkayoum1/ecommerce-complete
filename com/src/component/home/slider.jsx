@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from '../../assets/ChatGPT Image 26 juil. 2026, 18_59_15.png';
 
- 
+ import '../../index.css'
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
 function Slider() {
@@ -16,7 +16,7 @@ function Slider() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item  style={{display:'flex'}}   className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="First slide" /> */}
-                  <img src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
+                  <img className='img' src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
         <Carousel.Caption>
           <h3  className='text'>هناك  خصم كبير </h3>
@@ -25,7 +25,7 @@ function Slider() {
       </Carousel.Item>
       <Carousel.Item   className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="Second slide" /> */}
-                  <img src={Image} alt=""   style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
+                  <img className='img' src={Image} alt=""   style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
         <Carousel.Caption>
           <h3  className='text'>هناك  خصم كبير </h3>
@@ -34,7 +34,7 @@ function Slider() {
       </Carousel.Item>
       <Carousel.Item  className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="Third slide" /> */}
-                  <img src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
+                  <img className='img' src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
         <Carousel.Caption>
           <h3  className='text'>هناك  خصم كبير </h3>
