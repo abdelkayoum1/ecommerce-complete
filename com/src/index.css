@@ -130,3 +130,22 @@ color: white;
         display:none;
     }
 }
+/* الكمبيوتر */
+.sidebar-desktop {
+  display: block;
+}
+
+.sidebar-mobile {
+  display: none;
+}
+
+/* الهاتف والتابلت */
+@media (max-width: 991px) {
+  .sidebar-desktop {
+    display: none;
+  }
+
+  .sidebar-mobile {
+    display: block;
+  }
+}

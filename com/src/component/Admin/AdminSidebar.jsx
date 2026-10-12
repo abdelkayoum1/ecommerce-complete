@@ -1,98 +1,115 @@
-import React from 'react'
+
+import React from 'react';
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import { Padding } from '@mui/icons-material';
 import '../../index.css';
-import {Link }from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 const AdminSidebar = () => {
   return (
+    <>
+      {/* الكمبيوتر: Sidebar القديم */}
+      <div className="sidebar-desktop">
+        <Box
+          sx={{
+            background: 'white',
+            width: '100%',
+            marginTop: '5px',
+            padding: '5px',
+            borderRadius: '5px',
+            boxShadow: '0 15px 5px rgb(0,15,15,0.5)',
+          }}
+        >
+          <Link to="/admin/allproducts" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              ادارة المنتجات
+            </div>
+          </Link>
 
-    <Navbar expand="lg" >
-      <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-           
-              <NavDropdown.Item href="#action/3.1">
-                  <Link  to='/admin/allproducts'  style={{textDecoration:'none',color:'balck',fontWeight:'bold',fontSize:'15px'}}>
-      <div  className='barnd-text 'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-      ادارة المنتجات
-    </div>
-      </Link>
-              </NavDropdown.Item>
+          <Link to="/admin/allorder" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              ادارة الطلبيات
+            </div>
+          </Link>
 
-                 <NavDropdown.Item href="#action/3.1">
-                  <Link  to='/admin/allorder'  style={{textDecoration:'none',fontWeight:'bold',fontSize:'15px'}}>
-      <div  className='barnd-text 'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-     ادارة الطلبيات
-    </div>
-      </Link>
-              </NavDropdown.Item>
-            
-            
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  
-//  <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
-//       <Box >
-    //   <Link  to='/admin/allproducts'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-    //   <div  className='barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-    //   ادارة المنتجات
-    // </div>
-    //   </Link>
-    // <Link  to='/admin/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div   className='barnd-text  sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-     
-//        ادارة الطلبيات
-//     </div>
-//     </Link>
+          <Link to="/admin/addbrand" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              اضف ماركة
+            </div>
+          </Link>
 
+          <Link to="/admin/addcategory" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              اضف تصنيف
+            </div>
+          </Link>
 
-//     <Link  to='/admin/addbrand'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div   className='barnd-text  sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-//  اضف  ماركة
-//     </div>
-//     </Link>
+          <Link to="/admin/addsubcategory" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              اضف تصنيف فرعي
+            </div>
+          </Link>
 
+          <Link to="/admin/addproduct/:id" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              اضف منتج
+            </div>
+          </Link>
 
-//     <Link  to='/admin/addcategory'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className='barnd-text  sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-//        اضف تصنيف
-//     </div>
-//    </Link>
+          <Link to="/admin/addcoupoun" style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold', fontSize: '15px' }}>
+            <div className="barnd-text sidbare" style={{ borderBottom: '1px solid black', cursor: 'pointer', padding: '10px', textAlign: 'center' }}>
+              اضف كوبون
+            </div>
+          </Link>
+        </Box>
+      </div>
 
-// <Link  to='/admin/addsubcategory'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className=' barnd-text sidbare'  style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-//     اضف  تصنيف فرعي 
-//     </div>
-//     </Link>
-//     <Link  to='/admin/addproduct/:id'   style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className=' barnd-text sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}}>
-//      اضف منتج
-//     </div>
-//     </Link>
+      {/* الهاتف: Navbar */}
+      <div className="sidebar-mobile">
+        <Navbar expand="lg">
+          <Container fluid>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-//      <Link  to='/admin/addcoupoun'   style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className=' barnd-text sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}}>
-//      اضف كوبون
-//     </div>
-//     </Link>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="flex-column w-100">
 
+                <Nav.Link as={Link} to="/admin/allproducts">
+                  ادارة المنتجات
+                </Nav.Link>
 
+                <Nav.Link as={Link} to="/admin/allorder">
+                  ادارة الطلبيات
+                </Nav.Link>
 
+                <Nav.Link as={Link} to="/admin/addbrand">
+                  اضف ماركة
+                </Nav.Link>
 
-//     </Box>
-//     </Box>
-  )
-}
+                <Nav.Link as={Link} to="/admin/addcategory">
+                  اضف تصنيف
+                </Nav.Link>
 
-export default AdminSidebar
+                <Nav.Link as={Link} to="/admin/addsubcategory">
+                  اضف تصنيف فرعي
+                </Nav.Link>
+
+                <Nav.Link as={Link} to="/admin/addproduct/:id">
+                  اضف منتج
+                </Nav.Link>
+
+                <Nav.Link as={Link} to="/admin/addcoupoun">
+                  اضف كوبون
+                </Nav.Link>
+
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+    </>
+  );
+};
+
+export default AdminSidebar;
