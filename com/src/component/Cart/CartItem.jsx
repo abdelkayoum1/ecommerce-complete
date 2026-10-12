@@ -46,7 +46,13 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                {datacart.product.title}
               
               </div>
+              
               <div className="d-inline pt-2 cat-rate me-2">{datacart.product.ratingsAverage ||0}</div>
+            </Col>
+             <Col sm="12" className="mt-1 d-flex gap-2">
+              <div
+                className="color ms-2 "
+                style={{ backgroundColor: datacart.color,width:'30px',height:'30px',borderRadius:'50%' }}></div>
             </Col>
           </Row>
           <Row>
@@ -69,11 +75,11 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
 </div>
           </Row>
           <Row>
-            <Col sm="12" className="mt-1 d-flex gap-2">
+            {/* <Col sm="12" className="mt-1 d-flex gap-2">
               <div
                 className="color ms-2 "
                 style={{ backgroundColor: datacart.color,width:'30px',height:'30px',borderRadius:'50%' }}></div>
-            </Col>
+            </Col> */}
 
                                       <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
 
