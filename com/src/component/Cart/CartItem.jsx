@@ -64,6 +64,8 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                   type="number"
                   style={{ width: "40px", height: "25px" }}
                 />
+                              <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
+
 </div>
           </Row>
           <Row>
@@ -72,11 +74,13 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                 className="color ms-2 "
                 style={{ backgroundColor: datacart.color,width:'30px',height:'30px',borderRadius:'50%' }}></div>
             </Col>
+
+                                      <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
+
           </Row>
   
-          <Row className="justify-content-between">
-            <Col sm="12" className=" d-flex flex-row justify-content-between align-Item-center">
-              <div className="d-inline pt-2 d-flex">
+        
+             
                 {/* <div className="barnd-text   cat-text  d-inline">الكميه</div> */}
                 {/* <input
                 value={count}
@@ -86,11 +90,10 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                   style={{ width: "40px", height: "25px" }}
                 /> */}
 
-              <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
-              </div>
-              <div className="d-inline pt-2 barnd-text">  {`${datacart.price || 0}`} جنية</div>
-            </Col>
-          </Row>
+              {/* <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button> */}
+
+              
+          
         </div>
       </Col>
     
