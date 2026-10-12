@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import '../../index.css';
@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const AdminSidebar = () => {
+const AdminSidebar = ({open,setOpen}) => {
+
+  
   return (
     <>
       {/* الكمبيوتر: Sidebar القديم */}
@@ -67,47 +69,53 @@ const AdminSidebar = () => {
       </div>
 
       {/* الهاتف: Navbar */}
-      <div className="sidebar-mobile">
-        <Navbar expand="lg">
-          <Container fluid>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+     
+<div
+  className="sidebar-mobile"
+ 
+>
+  <Navbar expand={false}    expanded={open} onToggle={setOpen}>
+    <Container fluid>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+       
+      />
 
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="flex-column w-100">
+      <Navbar.Collapse id="basic-navbar-nav" >
+        <Nav className="flex-column w-100">
+          <Nav.Link as={Link} to="/admin/allproducts" onClick={() => setOpen(false)}>
+            ادارة المنتجات
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/allproducts">
-                  ادارة المنتجات
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/allorder" onClick={() => setOpen(false)}>
+            ادارة الطلبيات
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/allorder">
-                  ادارة الطلبيات
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/addbrand" onClick={() => setOpen(false)}>
+            اضف ماركة
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/addbrand">
-                  اضف ماركة
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/addcategory" onClick={() => setOpen(false)}>
+            اضف تصنيف
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/addcategory">
-                  اضف تصنيف
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/addsubcategory" onClick={() => setOpen(false)}>
+            اضف تصنيف فرعي
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/addsubcategory">
-                  اضف تصنيف فرعي
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/addproduct/:id" onClick={() => setOpen(false)}>
+            اضف منتج
+          </Nav.Link>
 
-                <Nav.Link as={Link} to="/admin/addproduct/:id">
-                  اضف منتج
-                </Nav.Link>
+          <Nav.Link as={Link} to="/admin/addcoupoun" onClick={() => setOpen(false)}>
+            اضف كوبون
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+</div>
 
-                <Nav.Link as={Link} to="/admin/addcoupoun">
-                  اضف كوبون
-                </Nav.Link>
-
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
     </>
   );
 };

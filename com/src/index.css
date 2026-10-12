@@ -139,18 +139,24 @@ color: white;
 /* الهاتف والتابلت */
 @media (max-width: 991px) {
   .admin-sidebar-column {
-    flex: 0 0 0 !important;
-    width: 0 !important;
-    max-width: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
+ 
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 12px !important;
+  position: relative;
   }
+  .row {
+  flex-wrap: wrap !important;
+}
   .admin-orders-column {
     flex: 0 0 100% !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0;
     margin-top: 50px !important;
+    position: relative !important;
+    z-index: auto !important;
   }
    .admin-products-column {
     flex: 0 0 100% !important;
@@ -158,23 +164,21 @@ color: white;
     max-width: 100% !important;
     min-width: 0;
     margin-top: 50px !important;
-  }
+    position: relative !important;
+z-index: auto !important;
+}
 
   .sidebar-desktop {
     display: none;
-    z-index: -1;
   }
 
   .sidebar-mobile {
     display: block;
-    z-index: 99;
+    position: relative !important;
+    z-index: 99 !important;
+
     width: 100%;
   }
 
-  .admin-products-column {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0;
-  }
+ 
 }
