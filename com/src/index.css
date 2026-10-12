@@ -150,14 +150,24 @@ color: white;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0;
+    margin-top: 50px !important;
+  }
+   .admin-products-column {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    margin-top: 50px !important;
   }
 
   .sidebar-desktop {
     display: none;
+    z-index: -1;
   }
 
   .sidebar-mobile {
     display: block;
+    z-index: 99;
     width: 100%;
   }
 

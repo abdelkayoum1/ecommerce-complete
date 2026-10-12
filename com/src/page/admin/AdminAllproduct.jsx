@@ -14,7 +14,7 @@ const AdminAllproduct = () => {
     <Row
       style={{
         direction: "rtl",
-        flexWrap:"wrap",
+        flexWrap:"nowrap",
       }}
     >
       <Col
@@ -22,7 +22,8 @@ const AdminAllproduct = () => {
         style={{
           flex: "0 0 250px",
         }}
-      >
+ className="admin-sidebar-column"      
+ >
         <AdminSidebar />
       </Col>
 
@@ -32,6 +33,7 @@ const AdminAllproduct = () => {
           
           minWidth: 0,
         }}
+         className="admin-products-column"
       >
 {loading? ( <Box sx={{width:"100%",display:'flex',justifyContent:'center',alignItems:'center',marginTop:'10px'}}> <Spinner/> </Box>
 ):<Adminallproducts dataitem={dataa}  getdata={getdata}/>}
