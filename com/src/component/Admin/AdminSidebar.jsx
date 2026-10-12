@@ -16,7 +16,6 @@ const AdminSidebar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
            
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                   <Link  to='/admin/allproducts'  style={{textDecoration:'none',fontWeight:'bold',fontSize:'15px'}}>
       <div  className='barnd-text 'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
@@ -38,7 +37,6 @@ const AdminSidebar = () => {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
