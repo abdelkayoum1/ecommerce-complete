@@ -195,3 +195,11 @@ z-index: auto !important;
 
  
 }
+@media(min-width: 992px) {
+    .sidebar-mobile{
+        display: none;
+    }
+    .sidebar-desktop{
+        display: block;
+    }
+}

@@ -4,7 +4,9 @@ import Box from "@mui/material/Box";
 import { Padding } from '@mui/icons-material';
 import '../../index.css';
 import {Link }from 'react-router-dom';
-import "../../index.css"
+import "../../index.css";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 const UsersideBar = ({open,setOpen}) => {
   return (
   
@@ -61,38 +63,32 @@ const UsersideBar = ({open,setOpen}) => {
 
       <Navbar.Collapse id="basic-navbar-nav" >
         <Nav className="flex-column w-100">
-          <Nav.Link as={Link} to="/admin/allproducts" onClick={() => setOpen(false)}>
- <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+           <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
       <div  className=' barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
       ادارة الطلبيات
     </div>
       </Link>
 
-          </Nav.Link>
+           <Link  to='/user/favorate'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+      <div   className=' barnd-text sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+     
+ القائمة المفضلة
+    </div>
+    </Link>
 
-          <Nav.Link as={Link} to="/admin/allorder" onClick={() => setOpen(false)}>
-            ادارة الطلبيات
-          </Nav.Link>
+          <Link  to='/user/adress'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+      <div   className=' barnd-text sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+   العنوان  الشخصية
+    </div>
+    </Link>
 
-          <Nav.Link as={Link} to="/admin/addbrand" onClick={() => setOpen(false)}>
-            اضف ماركة
-          </Nav.Link>
+         <Link  to="/user/prefile"  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+      <div  className=' barnd-text sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+        الملف الشخصي
+    </div>
+   </Link>
 
-          <Nav.Link as={Link} to="/admin/addcategory" onClick={() => setOpen(false)}>
-            اضف تصنيف
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/admin/addsubcategory" onClick={() => setOpen(false)}>
-            اضف تصنيف فرعي
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/admin/addproduct/:id" onClick={() => setOpen(false)}>
-            اضف منتج
-          </Nav.Link>
-
-          <Nav.Link as={Link} to="/admin/addcoupoun" onClick={() => setOpen(false)}>
-            اضف كوبون
-          </Nav.Link>
+         
         </Nav>
       </Navbar.Collapse>
     </Container>
