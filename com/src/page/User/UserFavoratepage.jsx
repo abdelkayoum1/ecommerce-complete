@@ -10,6 +10,7 @@ import Useralloarderpage from "../../page/User/Useralloarderpage";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import UserFavorate from "../../component/User/UserFavorate";
+import '../../index.css';
 
 const UserFavoratepage = ({favid,setfavid,datafav,setdatafav}) => {
   return (
@@ -25,6 +26,7 @@ const UserFavoratepage = ({favid,setfavid,datafav,setdatafav}) => {
         style={{
           // flex: "0 0 250px",
         }}
+        className="desktop"
       >
         <UsersideBar />
       </Col>

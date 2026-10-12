@@ -17,7 +17,7 @@ const Userprefilepage = () => {
   return (
     <Row
       style={{
-        background: "#f5f5f5", minHeight: "100vh",
+        background: "#f5f5f5",
         direction: "rtl",
         flexWrap: "nowrap",
       }}
@@ -27,6 +27,7 @@ const Userprefilepage = () => {
         style={{
           // flex: "0 0 250px",
         }}
+        className="desktop"
       >
         <UsersideBar />
       </Col>

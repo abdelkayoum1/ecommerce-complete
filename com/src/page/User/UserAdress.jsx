@@ -11,12 +11,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import UserFavorate from "../../component/User/UserFavorate";
 import Useradressecard from "../../component/User/Useradressecard";
+import '../../index.css'
 
 const UserAdress = () => {
   return (
     <Row
       style={{
-        background: "", minHeight: "100vh",
+        background: "",
         direction: "rtl",
         flexWrap: "nowrap",
       }}
@@ -26,6 +27,7 @@ const UserAdress = () => {
         style={{
           // flex: "0 0 250px",
         }}
+        className="desktop"
       >
         <UsersideBar />
       </Col>

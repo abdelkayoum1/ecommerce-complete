@@ -195,8 +195,11 @@ z-index: auto !important;
 
   .لاتوجد{
     position: relative !important;
-    top: 100px;
+    top: 100px !important;
+   left: 600px;
+    width: 100% !important;
   }
+ 
 
  
 }
@@ -207,4 +210,8 @@ z-index: auto !important;
     .sidebar-desktop{
         display: block;
     }
+     .desktop{
+    flex: 0 0 250px !important;
+   
+  }
 }

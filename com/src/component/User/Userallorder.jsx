@@ -14,7 +14,7 @@ const Userallorder = ({getorder,results,Getorder}) => {
   return (
     <Row
       style={{
-        background: "#f5f5f5", minHeight: "100vh",
+        background: "#f5f5f5",
         direction: "rtl",
         flexWrap: "nowrap",
       }}
@@ -24,6 +24,7 @@ const Userallorder = ({getorder,results,Getorder}) => {
         style={{
           // flex: "0 0 250px",
         }}
+        className="desktop"
       >
         <UsersideBar />
       </Col>
