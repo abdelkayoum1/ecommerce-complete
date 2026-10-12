@@ -1,7 +1,8 @@
 import '../../index.css';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import Deleteicon from '../../assets/delete.png'
-import Badge from '@mui/material/Badge'
+import Badge from '@mui/material/Badge';
+import Logo from '../../assets/logo.png'
 import {
   AppBar,
   Toolbar,
@@ -123,7 +124,7 @@ export default function Navbare({ products,datasearch,datacart }) {
 
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <img src="/logo.png" alt="logo" width={45} />
+          <img src={Logo} alt="logo" width={45} />
         </Box>
       </Toolbar>
     </AppBar>
