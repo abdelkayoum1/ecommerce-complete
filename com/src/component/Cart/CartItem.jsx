@@ -50,7 +50,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
             </Col>
           </Row>
           <Row>
-            <Col sm="12" className="mt-1">
+            <Col sm="12" className="mt-1"  style={{marginBottom:'10px'}}>
               <div className="barnd-text  cat-text d-inline">الماركة :</div>
               <div className="barnd-text d-inline mx-1">{datacart.product.brand.name || ""} </div>
               
