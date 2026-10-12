@@ -28,8 +28,8 @@ function Slider() {
                   <img src={Image} alt=""   style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
         <Carousel.Caption>
-          <h3  className='text'>Second slide label</h3>
-          <p  className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3  className='text'>هناك  خصم كبير </h3>
+          <p  className='text'>خصم يصل الي  50% عند  شراؤك</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item  className='slider-background' interval={2000}>
@@ -37,9 +37,9 @@ function Slider() {
                   <img src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
         <Carousel.Caption>
-          <h3  className='text'>Third slide label</h3>
+          <h3  className='text'>هناك  خصم كبير </h3>
           <p  className='text'>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+         خصم يصل الي  50% عند  شراؤك
           </p>
         </Carousel.Caption>
       </Carousel.Item>
