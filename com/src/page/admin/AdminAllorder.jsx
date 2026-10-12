@@ -34,7 +34,7 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
       <Col
       xs={12}
         style={{
-         
+           width:"100%",
           minWidth: 0,
         }}
       >
