@@ -10,7 +10,7 @@ const UsersideBar = () => {
   
 
 <>
-<div  className='sidebar-deskrop'>
+<div  className='sidebar-desktop'>
    <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
       <Box >
       <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
