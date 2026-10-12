@@ -14,7 +14,7 @@ const UsercartItemorder = ({getorder,results}) => {
   return (
     <>
           
-            <Box  sx={{background:'white',width:'70%',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
+            <Box  sx={{background:'white',width:'100%',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
                <Box className="div"  sx={{color:'black',fontWeight:'bold'}}>   تم بتاريخ  {new Date(getorder.createdAt).toLocaleDateString("fr-FR")}</Box>
     
 
