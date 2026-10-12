@@ -10,7 +10,7 @@ const UsersideBar = () => {
   
 
 <>
-<div  className='sidebare-deskrop'>
+<div  className='sidebar-deskrop'>
    <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
       <Box >
       <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
@@ -51,7 +51,7 @@ const UsersideBar = () => {
 
 {/* #responsive mobile */}
 
-<div  className='sidebare-mobile'>
+<div  className='sidebar-mobile'>
    <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
       <Box >
       <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
