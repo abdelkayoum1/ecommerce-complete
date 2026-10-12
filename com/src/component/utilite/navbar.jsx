@@ -124,7 +124,7 @@ export default function Navbare({ products,datasearch,datacart }) {
 
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <img src={Logo} alt="logo" width={45} />
+          <img src={Logo} alt="logo" width={60} />
         </Box>
       </Toolbar>
     </AppBar>
