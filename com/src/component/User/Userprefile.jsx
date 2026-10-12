@@ -65,7 +65,7 @@ Getuserprefile()
   
   الصفحة الرئيسية
   </div>  
-<div className="div"  style={{background:'white',borderRadius:'10px',marginBottom:'20px',marginLeft:'100px',padding:'10px'}}>
+<div className="div"  style={{background:'#f5f5f5',borderRadius:'10px',marginBottom:'20px',marginLeft:'100px',padding:'10px'}}>
   <div className="div"  style={{display:'flex',justifyContent:'space-between'}}>
     <div className="div"  style={{display:'flex' ,gap:5,marginBottom:'10px' }}>
       <Typography> 
