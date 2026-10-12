@@ -63,7 +63,7 @@ console.log("carte",datacart)
 
         </Col>
 
-         <Col   xs="6" md="3">
+         <Col   xs="6" md="3"  className='mobile'>
         <CartCheckout  products={products} Deletecart={Deletecart} isvalid={isvalid} totalAfterDiscount={totalAfterDiscount} settotalAfterDiscount={settotalAfterDiscount}  coupon={coupon} setcoupoun={setcoupoun}Updatecoupon={Updatecoupon} Gettocarte={Gettocarte} datacart={datacart}/>
         </Col>
       </Row>

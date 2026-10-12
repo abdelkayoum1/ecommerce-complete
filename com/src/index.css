@@ -169,7 +169,12 @@ z-index: auto !important;
 }
 
 .img{
-    width: 40px;
+    width: 60px;
+}
+
+.mobile{
+    position: relative;
+    right: 40px;
 }
 
   .sidebar-desktop {
