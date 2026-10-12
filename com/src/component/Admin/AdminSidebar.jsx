@@ -10,7 +10,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const AdminSidebar = () => {
   return (
 
-     <Navbar expand="lg" className="bg-body-tertiary">
+     <Navbar expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
