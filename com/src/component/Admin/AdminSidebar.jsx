@@ -17,11 +17,23 @@ const AdminSidebar = () => {
           <Nav className="me-auto">
            
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item href="#action/3.1">
+                  <Link  to='/admin/allproducts'  style={{textDecoration:'none',fontWeight:'bold',fontSize:'15px'}}>
+      <div  className='barnd-text 'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+      ادارة المنتجات
+    </div>
+      </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+
+                 <NavDropdown.Item href="#action/3.1">
+                  <Link  to='/admin/allorder'  style={{textDecoration:'none',fontWeight:'bold',fontSize:'15px'}}>
+      <div  className='barnd-text 'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+     ادارة الطلبيات
+    </div>
+      </Link>
+              </NavDropdown.Item>
+            
+            
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
@@ -34,12 +46,12 @@ const AdminSidebar = () => {
   
 //  <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
 //       <Box >
-//       <Link  to='/admin/allproducts'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className='barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-//       ادارة المنتجات
-//     </div>
-//       </Link>
-//     <Link  to='/admin/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+    //   <Link  to='/admin/allproducts'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+    //   <div  className='barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+    //   ادارة المنتجات
+    // </div>
+    //   </Link>
+    // <Link  to='/admin/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
 //       <div   className='barnd-text  sidbare' style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
      
 //        ادارة الطلبيات
