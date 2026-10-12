@@ -120,3 +120,13 @@ color: white;
 .barnd-text{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif  !important;
 }
+
+.admin-sidebar-column{
+
+    flex: 0 0 250px;
+}
+@media(max-width:991px) {
+    .admin-sidebar-column{
+        display:none;
+    }
+}
