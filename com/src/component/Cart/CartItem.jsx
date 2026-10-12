@@ -27,7 +27,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
   },[datacart.count])
 
     return (
-        <Container  sx={{borderRadius:'10px',height:'180px',background:'rgb(204, 202, 206)',marginRight:'5px'}}>
+        <Container  sx={{borderRadius:'10px',background:'rgb(204, 202, 206)',marginRight:'5px'}}>
         <Col xs="12" className="cart-item-body my-2 d-flex px-2" style={{gap:'20px'}}>
         <img width="160px" height="140px" src={`https://ecommerce-complete-kbe3.onrender.com/images/${datacart.product.imageCover}`} style={{objectFit:'fill',marginTop:'5px',borderRadius:'5px'}} alt="" />
         <div className="w-100">
@@ -63,6 +63,8 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
             </Col>
             <div  style={{display:'flex',justifyContent:"space-between"  }}>
             <div  style={{display:'flex'  }}>
+                                                              <div style={{position:'absolute',right:"80px",}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
+
              <div className="barnd-text   cat-text  d-inline">الكميه</div>
               <input
                 value={count}
@@ -72,34 +74,35 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                   style={{ width: "40px", height: "25px" }}
                 />
                               <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
-                                      <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
 
 </div>
 </div>
           </Row>
-          <Row>
-            {/* <Col sm="12" className="mt-1 d-flex gap-2">
+
+          {/* <Row>
+            
+            <Col sm="12" className="mt-1 d-flex gap-2">
               <div
                 className="color ms-2 "
                 style={{ backgroundColor: datacart.color,width:'30px',height:'30px',borderRadius:'50%' }}></div>
-            </Col> */}
+            </Col>
 
-                                      {/* <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div> */}
+                                      <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
 
           </Row>
   
         
              
-                {/* <div className="barnd-text   cat-text  d-inline">الكميه</div> */}
-                {/* <input
+                <div className="barnd-text   cat-text  d-inline">الكميه</div>
+                <input
                 value={count}
                 onChange={(e)=>setcount(e.target.value)}
                   className="mx-2 "
                   type="number"
                   style={{ width: "40px", height: "25px" }}
-                /> */}
+                />
 
-              {/* <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button> */}
+              <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button> */}
 
               
           
