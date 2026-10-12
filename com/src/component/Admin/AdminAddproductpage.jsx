@@ -20,7 +20,7 @@ const AdminAddproductpage = () => {
  
   return (
     <div>
-      <Row className="justify-content-start ">
+      <Row className="justify-content-start "  style={{margin:"10px"}}>
         <div
           className="admin-content-text pb-4"
           style={{ fontWeight: "bold", fontSize: "18px", marginTop: "10px" }}

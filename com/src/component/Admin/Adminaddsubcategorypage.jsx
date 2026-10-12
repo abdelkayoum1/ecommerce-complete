@@ -86,7 +86,7 @@ const Adminaddsubcategorypage = () => {
      
   return (
      <div>
-            <Row className="justify-content-start ">
+            <Row className="justify-content-start " style={{margin:'20px'}}>
                 <div className="admin-content-text pb-4"  style={{fontWeight:'bold'}}>اضف تصنيف فرع جديد</div>
                 <Col sm="8">
                    

@@ -182,11 +182,11 @@ z-index: auto !important;
 }
 
   .sidebar-desktop {
-    display: none;
+    display: none !important;
   }
 
   .sidebar-mobile {
-    display: block;
+    display: block !important;
     position: relative !important;
     z-index: 99 !important;
 
@@ -203,15 +203,18 @@ z-index: auto !important;
 
  
 }
-@media(min-width: 992px) {
+@media(min-width: 995px) {
     .sidebar-mobile{
-        display: none;
+        display: none !important;
     }
     .sidebar-desktop{
-        display: block;
+        display: block !important;
     }
      .desktop{
     flex: 0 0 250px !important;
    
+  }
+  .admin-sidebar-column{
+    flex: 0 0 250px !important;
   }
 }

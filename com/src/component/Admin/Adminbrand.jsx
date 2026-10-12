@@ -22,8 +22,8 @@ const Adminbrand = () => {
   ] = Addbrandhouk();
   return (
     <div>
-      <Row className="justify-content-start ">
-        <div className="admin-content-text pb-4" style={{ fontWeight: "bold" }}>
+      <Row className="justify-content-start "  style={{margin:'20px'}}>
+        <div className="admin-content-text pb-4" style={{ fontWeight: "bold"}}>
           اضف ماركه جديده
         </div>
         <Col sm="8">

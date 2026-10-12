@@ -15,9 +15,11 @@ const Adminaddcategory = () => {
       }}
     >
       <Col
+      lg="auto"
         style={{
-          flex: "0 0 250px",
+          // flex: "0 0 250px",
         }}
+        className="admin-sidebar-column"
       >
         <AdminSidebar />
       </Col>

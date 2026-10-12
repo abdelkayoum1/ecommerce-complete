@@ -19,7 +19,7 @@ const Adminaddcoupoun = () => {
 
   return (
     <div>
-      <Row className="justify-content-start "  >
+      <Row className="justify-content-start "  style={{margin:"5px"}}>
         <div className="admin-content-text pb-4" style={{ fontWeight: "bold" }}>
           اضف كوبون جديد
         </div>
