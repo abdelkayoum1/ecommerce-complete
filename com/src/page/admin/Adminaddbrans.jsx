@@ -25,7 +25,7 @@ const Adminaddbrans = () => {
       <Col
       className="admin-products-column p-0" 
         style={{
-          flex: "1 1 auto",
+         
           minWidth: 0,
         }}
       >
