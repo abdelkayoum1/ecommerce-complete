@@ -15,28 +15,19 @@ const Adminaddbrans = () => {
       }}
     >
       <Col
-    
-        xs={3}
-  style={{
-    minWidth: 0,
-    paddingLeft: "4px",
-    paddingRight: "4px",
-  }}
+      
+        style={{
+          flex: "0 0 250px",
+        }}
       >
         <AdminSidebar />
       </Col>
 
       <Col
-       xs={9}
-  style={{
-    minWidth: 0,
-    paddingLeft: "4px",
-    paddingRight: "4px",
-  }}
-        // style={{
-        //   flex: "1 1 auto",
-        //   minWidth: 0,
-        // }}
+        style={{
+          flex: "1 1 auto",
+          minWidth: 0,
+        }}
       >
        <Adminbrand/>
       </Col>
