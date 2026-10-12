@@ -71,6 +71,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                   style={{ width: "40px", height: "25px" }}
                 />
                               <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
+                                      <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
 
 </div>
           </Row>
@@ -81,7 +82,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                 style={{ backgroundColor: datacart.color,width:'30px',height:'30px',borderRadius:'50%' }}></div>
             </Col> */}
 
-                                      <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
+                                      {/* <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div> */}
 
           </Row>
   
