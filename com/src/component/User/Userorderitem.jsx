@@ -22,7 +22,7 @@ const Userorderitem = ({getorder}) => {
      {getorder.product.title}
           </Typography>
           <Box  sx={{display:'flex',gap:2}}>
-            <Typography sx={{color:'grey'}}>احمر</Typography>
+            {/* <Typography sx={{color:'grey'}}>{getorder.product.color}</Typography> */}
              <Typography sx={{color:'wheat'}}>{getorder.product.ratingsAverage ||0}</Typography>
               <Typography sx={{color:'grey'}}>{ `${getorder.product.ratingsQuantity} تقييم`}</Typography>
           </Box>

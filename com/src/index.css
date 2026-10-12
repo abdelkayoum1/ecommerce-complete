@@ -176,6 +176,10 @@ z-index: auto !important;
     position: relative;
     left: 70px !important;
 }
+.btnadd{
+     position: relative;
+    left: 50% !important;
+}
 
   .sidebar-desktop {
     display: none;

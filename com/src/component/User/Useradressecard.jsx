@@ -22,7 +22,7 @@ useEffect(()=>{
 ):<Box sx={{width:'100%',position:'relative',right:'40%',marginBottom:'30px'}} ><h6  style={{fontSize:'24Px'}} className='barnd-text'>لاتوجد عناوين</h6></Box>}
       
       <Link to='/user/addadress' style={{textDecoration:'none'}}>   
-         <Button  variant='contained'  sx={{position:'absolute',left:'500px'}}>اضافة عنوان جديد</Button>
+         <Button  variant='contained'  className='btnadd' sx={{position:'absolute',left:'500px'}}>اضافة عنوان جديد</Button>
          </Link>
       <ToastContainer/>
 
