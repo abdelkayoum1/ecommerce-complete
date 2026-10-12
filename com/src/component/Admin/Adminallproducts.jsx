@@ -6,7 +6,7 @@ const Adminallproducts = ({dataitem,getdata}) => {
   return (
     <div  >
       <Box >   
-        <Typography>ادارة جميع المنتجات</Typography>
+        <Typography  sx={{fontWeight:'bold'}}>ادارة جميع المنتجات</Typography>
       </Box>
     <Box  sx={{display:'flex',flexWrap:'wrap'}}>
       {dataitem? (dataitem.map((item,index)=>{
