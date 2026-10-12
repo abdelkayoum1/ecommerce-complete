@@ -15,6 +15,7 @@ const UserFavoratepage = ({favid,setfavid,datafav,setdatafav}) => {
   return (
     <Row
       style={{
+        // background: "#f5f5f5",
         direction: "rtl",
         flexWrap: "nowrap",
       }}
