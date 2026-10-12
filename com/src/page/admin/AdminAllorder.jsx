@@ -19,7 +19,7 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
     <Row
       style={{
         direction: "rtl",
-        flexWrap:"wrap",
+        flexWrap:"nowrap",
       }}
     >
       <Col
