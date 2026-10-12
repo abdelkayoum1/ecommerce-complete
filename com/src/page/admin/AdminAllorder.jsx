@@ -19,10 +19,11 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
     <Row
       style={{
         direction: "rtl",
-        flexWrap: "nowrap",
+        flexWrap:"wrap",
       }}
     >
       <Col
+      lg="auto"
         style={{
           flex: "0 0 250px",
         }}
@@ -31,8 +32,9 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
       </Col>
 
       <Col
+      xs={12}
         style={{
-          flex: "1 1 auto",
+         
           minWidth: 0,
         }}
       >
