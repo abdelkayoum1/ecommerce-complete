@@ -30,7 +30,7 @@ useEffect(()=>{
       <div>
         <div
           className="div"
-          style={{ marginTop: "5px", fontSize: "20px", fontWeight: "inherit" }}
+          style={{ marginTop: "5px", fontSize: "20px", fontWeight: "bold" }}
         >
           {" "}
         {user.name}
