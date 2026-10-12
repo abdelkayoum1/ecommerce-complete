@@ -131,7 +131,7 @@ const AdmincoupnCard = ({
           </Button>
         </Modal.Footer>
       </Modal>
-      <div style={{ width: "76%", marginTop: "15px" }}>
+      <div style={{ width: "100%", marginTop: "15px" }}>
         <div className="div">
           <div
             className="div"
