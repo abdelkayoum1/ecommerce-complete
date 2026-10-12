@@ -27,6 +27,7 @@ const AdminAllproduct = () => {
 
       <Col
       lg={12}
+      md={12}
         style={{
           flex: "1 1 auto",
           minWidth: 0,
