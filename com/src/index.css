@@ -174,7 +174,7 @@ z-index: auto !important;
 
 .mobile{
     position: relative;
-    right: 40px;
+    left: 40% !important;
 }
 
   .sidebar-desktop {
