@@ -19,10 +19,10 @@ const AdminSidebar = () => {
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                <Link  to='/admin/allproducts'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
-//       <div  className='barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
-//       ادارة المنتجات
-//     </div>
-//       </Link>
+       <div  className='barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
+      ادارة المنتجات
+     </div>
+      </Link>
               
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
