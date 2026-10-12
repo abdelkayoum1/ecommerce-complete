@@ -121,33 +121,44 @@ color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif  !important;
 }
 
-.admin-sidebar-column{
 
-    flex: 0 0 250px;
+/* الكمبيوتر */
+.admin-sidebar-column {
+  flex: 0 0 250px;
+  width: 250px;
 }
-@media(max-width:991px) {
-    .admin-sidebar-column{
-        display:none;
-    }
-    .sidebar-desktop {
-  display: none;
-}
-.sidebar-mobile {
+
+.sidebar-desktop {
   display: block;
 }
- .admin-sidebar-column {
-    flex: 0 0 auto !important;
-    width: auto !important;
+
+.sidebar-mobile {
+  display: none;
+}
+
+/* الهاتف والتابلت */
+@media (max-width: 991px) {
+  .admin-sidebar-column {
+    flex: 0 0 0 !important;
+    width: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .sidebar-desktop {
+    display: none;
+  }
+
+  .sidebar-mobile {
+    display: block;
+    width: 100%;
   }
 
   .admin-products-column {
-    flex: 0 0 100% !important;
+    flex: 1 1 100% !important;
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0;
   }
 }
-
-
-
-
-

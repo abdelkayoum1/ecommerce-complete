@@ -17,7 +17,7 @@ const Adminaddbrans = () => {
       <Col
       
       xs="auto"
-        className="admin-sidebar-column"
+        className="admin-sidebar-column p-0"
       >
         <AdminSidebar />
       </Col>
