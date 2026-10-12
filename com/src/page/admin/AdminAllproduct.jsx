@@ -14,10 +14,11 @@ const AdminAllproduct = () => {
     <Row
       style={{
         direction: "rtl",
-        flexWrap: "nowrap",
+        flexWrap:"wrap",
       }}
     >
       <Col
+      lg="auto"
         style={{
           flex: "0 0 250px",
         }}
@@ -26,10 +27,9 @@ const AdminAllproduct = () => {
       </Col>
 
       <Col
-      lg={12}
-      md={12}
+      xs={12}
         style={{
-          flex: "1 1 auto",
+          
           minWidth: 0,
         }}
       >
