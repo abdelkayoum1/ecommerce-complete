@@ -14,7 +14,7 @@ function Slider() {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item   className='slider-background' interval={2000} style={{display:'flex'}}>
+      <Carousel.Item  style={{display:'flex'}}   className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="First slide" /> */}
                   <img src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
@@ -23,7 +23,7 @@ function Slider() {
           <p  className='text'>خصم يصل الي  50% عند  شراؤك</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item  className='slider-background' interval={2000}style={{display:'flex'}}>
+      <Carousel.Item   className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="Second slide" /> */}
                   <img src={Image} alt=""   style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
@@ -32,11 +32,11 @@ function Slider() {
           <p  className='text'>خصم يصل الي  50% عند  شراؤك</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item  className='slider-background' interval={2000} style={{display:'flex'}}>
+      <Carousel.Item  className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="Third slide" /> */}
                   <img src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>
 
-        <Carousel.Caption  >
+        <Carousel.Caption>
           <h3  className='text'>هناك  خصم كبير </h3>
           <p  className='text'>
          خصم يصل الي  50% عند  شراؤك
