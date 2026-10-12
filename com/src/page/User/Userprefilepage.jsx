@@ -17,7 +17,7 @@ const Userprefilepage = () => {
   return (
     <Row
       style={{
-        background: "#f5f5f5",
+        // background: "#f5f5f5",
         direction: "rtl",
         flexWrap: "nowrap",
       }}
