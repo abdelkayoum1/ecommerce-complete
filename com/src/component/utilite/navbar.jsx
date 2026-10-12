@@ -76,7 +76,6 @@ export default function Navbare({ products,datasearch,datacart }) {
             color: "white",
           }}
         >
-          <Typography>العربية</Typography>
 
            <IconButton aria-label="cart" onClick={()=>navigate("/cart")} >
   <Badge badgeContent={products.length||"0"} color="primary">
