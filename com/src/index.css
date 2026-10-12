@@ -129,28 +129,13 @@ color: white;
     .admin-sidebar-column{
         display:none;
     }
-}
-/* الكمبيوتر */
-.sidebar-desktop {
-  display: block;
-}
-
-.sidebar-mobile {
+    .sidebar-desktop {
   display: none;
 }
-
-/* الهاتف والتابلت */
-@media (max-width: 991px) {
-  .sidebar-desktop {
-    display: none;
-  }
-
-  .sidebar-mobile {
-    display: block;
-  }
+.sidebar-mobile {
+  display: block;
 }
-@media (max-width: 991px) {
-  .admin-sidebar-column {
+ .admin-sidebar-column {
     flex: 0 0 auto !important;
     width: auto !important;
   }
@@ -161,3 +146,8 @@ color: white;
     max-width: 100% !important;
   }
 }
+
+
+
+
+
