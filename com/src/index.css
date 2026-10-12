@@ -193,6 +193,11 @@ z-index: auto !important;
     width: 100%;
   }
 
+  .لاتوجد{
+    position: relative !important;
+    top: 100px;
+  }
+
  
 }
 @media(min-width: 992px) {

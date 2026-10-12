@@ -40,7 +40,7 @@ const UserFavorate = ({favid,setfavid,datafav,setdatafav}) => {
       <Row> 
 
 {datafav.length>0? (    <Cardproductcontainer datafav={datafav} setdatafav={setdatafav}  product={datafav} favid={favid} setfavid={setfavid}  btntitle=""  title=""/>
-):<h6 style={{position:'absolute',bottom:'200px',right:'50%'}}>لاتوجد منتجات</h6>}
+):<h6  className='لاتوجد' style={{position:'absolute',bottom:'200px',right:'50%'}}>لاتوجد منتجات</h6>}
   
 
       </Row>
