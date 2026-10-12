@@ -6,7 +6,7 @@ import Admindetailperson from "../../component/Admin/Admindetailperson";
 
 import Paginationn from '../../component/utilite/Pagination';
 import Box from '@mui/material/Box';
-
+import '../../index.css'
 const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
   console.log(getorder)
 
@@ -20,6 +20,7 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
       style={{
         direction: "rtl",
         flexWrap:"nowrap",
+        margin:0
       }}
     >
       <Col
@@ -27,6 +28,7 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
         style={{
           flex: "0 0 250px",
         }}
+        className="admin-sidebar-column"
       >
         <AdminSidebar />
       </Col>
@@ -34,9 +36,9 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
       <Col
       xs={12}
         style={{
-           width:"100%",
           minWidth: 0,
         }}
+         className="admin-orders-column"
       >
          <div  className='barnd-text' style={{direction:'rtl',fontWeight:'bold', fontSize:'24px'}}>  ادارة الطلبيات</div>
        {getorder&&  getorder.length>0? (

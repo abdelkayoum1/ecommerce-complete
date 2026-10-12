@@ -145,6 +145,12 @@ color: white;
     padding: 0 !important;
     border: 0 !important;
   }
+  .admin-orders-column {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+  }
 
   .sidebar-desktop {
     display: none;
