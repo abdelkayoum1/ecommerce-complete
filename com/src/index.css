@@ -149,3 +149,15 @@ color: white;
     display: block;
   }
 }
+@media (max-width: 991px) {
+  .admin-sidebar-column {
+    flex: 0 0 auto !important;
+    width: auto !important;
+  }
+
+  .admin-products-column {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
