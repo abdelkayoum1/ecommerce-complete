@@ -61,7 +61,8 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
               <div className="barnd-text d-inline mx-1">{datacart.product.brand.name || ""} </div>
               
             </Col>
-            <div  style={{display:'flex'}}>
+            <div  style={{display:'flex',justifyContent:"space-between"  }}>
+            <div  style={{display:'flex'  }}>
              <div className="barnd-text   cat-text  d-inline">الكميه</div>
               <input
                 value={count}
@@ -73,6 +74,7 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
                               <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
                                       <div style={{position:'absolute',right:"65%"}} className=" barnd-text">  {`${datacart.price || 0}`} جنية</div>
 
+</div>
 </div>
           </Row>
           <Row>
