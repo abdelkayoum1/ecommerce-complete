@@ -141,6 +141,9 @@ const AdmincoupnCard = ({
               marginLeft: "100px",
               borderRadius: "5px",
               overflow: "hidden",
+              position:'relative'
+              ,
+              right:'50px'
             }}
           >
             <div
