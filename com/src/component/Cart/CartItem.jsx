@@ -53,7 +53,18 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
             <Col sm="12" className="mt-1">
               <div className="barnd-text  cat-text d-inline">الماركة :</div>
               <div className="barnd-text d-inline mx-1">{datacart.product.brand.name || ""} </div>
+              
             </Col>
+            <div  style={{display:'flex'}}>
+             <div className="barnd-text   cat-text  d-inline">الكميه</div>
+              <input
+                value={count}
+                onChange={(e)=>setcount(e.target.value)}
+                  className="mx-2 "
+                  type="number"
+                  style={{ width: "40px", height: "25px" }}
+                />
+</div>
           </Row>
           <Row>
             <Col sm="12" className="mt-1 d-flex gap-2">
@@ -66,14 +77,14 @@ const CartItem = ({products,datacart,Removeallcart,setdatacart,Deletecart,Update
           <Row className="justify-content-between">
             <Col sm="12" className=" d-flex flex-row justify-content-between align-Item-center">
               <div className="d-inline pt-2 d-flex">
-                <div className="barnd-text   cat-text  d-inline">الكميه</div>
-                <input
+                {/* <div className="barnd-text   cat-text  d-inline">الكميه</div> */}
+                {/* <input
                 value={count}
                 onChange={(e)=>setcount(e.target.value)}
                   className="mx-2 "
                   type="number"
                   style={{ width: "40px", height: "25px" }}
-                />
+                /> */}
 
               <Button variant='contained'  sx={{position:'relative',top:'-10px'}}  onClick={()=>{Updatecarteitem(datacart._id,count)}}>تغيير </Button>
               </div>
