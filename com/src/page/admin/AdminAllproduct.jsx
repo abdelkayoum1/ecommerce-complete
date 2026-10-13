@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner'
 import AdminSidebar from "../../component/Admin/AdminSidebar";
@@ -10,6 +10,8 @@ import { Box } from "@mui/material";
 const AdminAllproduct = () => {
  const  [dataproduct]=ViewsSearchproductHome();
     const  [handlepage,getdata,dataa,loading,cptpage]=Allproductpagination(10); 
+      const [sidebarOpen, setSidebarOpen] = useState(false);
+    
   return (
     <Row
       style={{
@@ -24,7 +26,7 @@ const AdminAllproduct = () => {
         }}
  className="admin-sidebar-column"      
  >
-        <AdminSidebar />
+        <AdminSidebar  open={sidebarOpen} setOpen={setSidebarOpen}/>
       </Col>
 
       <Col

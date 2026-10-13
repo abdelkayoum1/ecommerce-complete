@@ -149,7 +149,7 @@ color: white;
   .row {
   flex-wrap: wrap !important;
 }
-  .admin-orders-column {
+  .admin-orders-column{
     flex: 0 0 100% !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -185,12 +185,9 @@ z-index: auto !important;
     display: none !important;
   }
 
-  .sidebar-mobile {
+  .sidebar-mobilee {
     display: block !important;
     position: relative !important;
-    z-index: 99 !important;
-
-    width: 100%;
   }
 
   .لاتوجد{
@@ -204,7 +201,7 @@ z-index: auto !important;
  
 }
 @media(min-width: 995px) {
-    .sidebar-mobile{
+    .sidebar-mobilee{
         display: none !important;
     }
     .sidebar-desktop{

@@ -42,6 +42,7 @@ import userAddadressesHook from "./hook/User/userAddadressesHook";
 import AddtocartHook from "./hook/Cart/AddtocartHook";
 import { useEffect } from "react";
 import CreateOrderHook from "./hook/Order/CreateOrderHook";
+import Carousel from "./component/product/carousel";
 
 function App() {
   const [
@@ -94,6 +95,9 @@ function App() {
             />
             {/* </Route> */}
             <Route path="/sign" element={<Login />} />
+
+                        <Route path="/carousel" element={<Carousel  dataproduct={dataproduct} />} />
+
             <Route path="/register" element={<Register />} />
             <Route path="/allcategory" element={<Allcategory />} />
             <Route path="/allbrand" element={<AllBrand />} />

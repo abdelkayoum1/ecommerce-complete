@@ -27,6 +27,8 @@ const UserEditadressepage = () => {
         style={{
           // flex: "0 0 250px",
         }}
+                className="desktop"
+
       >
         <UsersideBar />
       </Col>

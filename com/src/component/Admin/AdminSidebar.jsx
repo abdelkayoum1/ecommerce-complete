@@ -19,7 +19,7 @@ const AdminSidebar = ({open,setOpen}) => {
           sx={{
             background: 'white',
             width: '100%',
-            marginTop: '5px',
+            marginTop: '55px',
             padding: '5px',
             borderRadius: '5px',
             boxShadow: '0 15px 5px rgb(0,15,15,0.5)',
@@ -72,10 +72,11 @@ const AdminSidebar = ({open,setOpen}) => {
       {/* الهاتف: Navbar */}
      
 <div
-  className="sidebar-mobile"
- 
+  className="sidebar-mobilee"
+  
+ style={{marginTop:'55px'}}
 >
-  <Navbar expand={false}    expanded={open} onToggle={setOpen}>
+  <Navbar expand={false}    expanded={open} onToggle={setOpen} >
     <Container fluid>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"

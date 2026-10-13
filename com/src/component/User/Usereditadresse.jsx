@@ -33,7 +33,7 @@ const Usereditadresse = () => {
   }, [id]);
   return (
     <div>
-      <div className="div" style={{ fontWeight: "bold", marginBottom: "10px" }}>
+      <div className="div" style={{ fontWeight: "bold", marginBottom: "55px" }}>
         تعديل عنوان
       </div>
       <Box

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
 import ProductCard from '../product/ProductCard'
 import laptop from '../../assets/labtop.png'
-import Cardproductcontainer from '../product/Cardproductcontainer'
+import Cardproductcontainer from '../product/Cardproductcontainer';
+import '../../index.css'
 
 const UserFavorate = ({favid,setfavid,datafav,setdatafav}) => {
 // const[datafav,setdatafav]=useState([]);
@@ -34,8 +35,8 @@ const UserFavorate = ({favid,setfavid,datafav,setdatafav}) => {
 // console.log(datafav)
 //     },[datafav])
   return (
-    <div>
-      <div className="admin-content-text  pb-4"> المنتجات المفضلة</div>
+    <div  style={{marginBottom:'30px'}}>
+      <div className="admin-content-text  pb-4"  > المنتجات المفضلة</div>
 
       <Row> 
 

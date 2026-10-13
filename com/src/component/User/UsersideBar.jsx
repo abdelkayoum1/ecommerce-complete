@@ -13,7 +13,7 @@ const UsersideBar = ({open,setOpen}) => {
 
 <>
 <div  className='sidebar-desktop'>
-   <Box   style={{background:'white',width:'100%',marginTop:'5px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
+   <Box   style={{background:'white',width:'100%',marginTop:'55px',height:"300px",padding:'5px',borderRadius:'5px',boxShadow:'0 15px 5px  rgb(0,15,15,0.5)'}}>
       <Box >
       <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
       <div  className=' barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
@@ -54,7 +54,7 @@ const UsersideBar = ({open,setOpen}) => {
 {/* #responsive mobile */}
 
 <div  className='sidebar-mobile'>
-   <Navbar expand={false}    expanded={open} onToggle={setOpen}>
+   <Navbar expand={false}   expanded={open} onToggle={setOpen} >
     <Container fluid>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"

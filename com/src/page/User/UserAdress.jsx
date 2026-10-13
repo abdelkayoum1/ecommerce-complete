@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import UserFavorate from "../../component/User/UserFavorate";
 import Useradressecard from "../../component/User/Useradressecard";
-import '../../index.css'
+import '../../index.css';
 
 const UserAdress = () => {
   return (
@@ -27,9 +27,9 @@ const UserAdress = () => {
         style={{
           // flex: "0 0 250px",
         }}
-        className="desktop"
+        className="desktop  admin-sidebar-column"
       >
-        <UsersideBar />
+        <UsersideBar   />
       </Col>
 
       <Col

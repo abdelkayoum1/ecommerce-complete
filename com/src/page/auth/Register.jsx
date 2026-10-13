@@ -13,6 +13,7 @@ import notify from "../../hook/useNotification";
   import { ToastContainer, toast } from 'react-toastify';
 import { Auth } from "./context/auth/authContext";
 
+// import '../../page/auth/register.css'
 // import Auth  from "../context/auth/authContext";
 
 const Register = () => {
@@ -36,6 +37,11 @@ const Register = () => {
    const passwordConfirm=confirmpassword.current.value
     const email = emailref.current.value;
     const password = passwordref.current.value;
+
+    if(name ===""){
+      notify("من فضلك  ادخل بيانات","warn")
+      return;
+    }
     try {
       const res = await fetch(`http://127.0.0.1:5000/api/v1/auth/signup`, {
         method: "POST",
@@ -81,17 +87,18 @@ const Register = () => {
     }
   }
   return (
-    <Container>
+    <Box  className="box" >
+
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          mt: "20px",
+          mt:10,
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <Typography variant="h4">Register now</Typography>
+        <Typography variant="h4" >Register now</Typography>
 
         <Box
           sx={{
@@ -99,24 +106,73 @@ const Register = () => {
             flexDirection: "column",
             mb: "10px",
             gap: "10px",
-            mt: 4,
+            
             border: 1,
+            
             borderColor: "#f5f5f5",
             padding: "10px",
           }}
         >
-          <Textfield inputRef={firstnameref} label="firstName" />
+        
+          <Textfield 
+    //         sx={{
+    //   " .MuiInputLabel-root": {
+    //     color: "white",
+    //   },
+    // " .MuiInputLabel-root.Mui-focused": {
+    //     color: "white",
+    //   },
+    // }} 
+    inputRef={firstnameref}   label="firstName" />
 
-          <Textfield inputRef={emailref} label="email" />
-          <Textfield type="password" inputRef={passwordref} label="password" />
-              <Textfield type="password" inputRef={confirmpassword} label="password" />
-              <Textfield type="number" value={phone}  onChange={changephone}label="Phone" />
+          <Textfield 
+    //        sx={{
+    //   " .MuiInputLabel-root": {
+    //     color: "white",
+    //   },
+    // " .MuiInputLabel-root.Mui-focused": {
+    //     color: "white",
+    //   },
+    // }} 
+    inputRef={emailref} label="email" />
+
+          <Textfield
+    //        sx={{
+    //   " .MuiInputLabel-root": {
+    //     color: "white",
+    //   },
+    // " .MuiInputLabel-root.Mui-focused": {
+    //     color: "white",
+    //   },
+    // }} 
+    type="password" inputRef={passwordref} label="password" />
+              <Textfield 
+    //            sx={{
+    //   " .MuiInputLabel-root": {
+    //     color: "white",
+    //   },
+    // " .MuiInputLabel-root.Mui-focused": {
+    //     color: "white",
+    //   },
+    // }
+    // }
+    type="password" inputRef={confirmpassword} label="password" />
+              <Textfield 
+    //           sx={{
+    //   " .MuiInputLabel-root": {
+    //     color: "white",
+    //   },
+    // " .MuiInputLabel-root.Mui-focused": {
+    //     color: "white",
+    //   },
+    // }} 
+    type="number" value={phone}  onChange={changephone}label="Phone" />
 
           <Button onClick={onsubmit} variant="contained">
             Register
           </Button>
 
-          <Typography>
+          <Typography  >
             not have account?{" "}
             <Button onClick={() => navigate("/sign")}>Login</Button>
           </Typography>
@@ -149,7 +205,7 @@ const Register = () => {
         </Box>
       </Box>
       <ToastContainer/>
-    </Container>
+    </Box>
   );
 };
 

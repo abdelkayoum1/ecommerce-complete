@@ -12,7 +12,7 @@ const UserAddadressepage = () => {
 
   return (
     <div>
-      <div className="div" style={{fontWeight:'bold',marginBottom:'10px'}}>
+      <div className="div" style={{fontWeight:'bold',marginBottom:'55px'}}>
         اضافة  عنوان جديد
       </div>
       <Box className="div"  style={{display:'flex',alignItems: "flex-end",flexDirection:'column',gap:30,direction:'ltr'}}>

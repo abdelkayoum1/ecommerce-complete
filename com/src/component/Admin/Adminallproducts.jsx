@@ -5,10 +5,10 @@ import Typography from '@mui/material/Typography'
 const Adminallproducts = ({dataitem,getdata}) => {
   return (
     <div  >
-      <Box >   
+      <Box  >   
         <Typography  sx={{fontWeight:'bold'}}>ادارة جميع المنتجات</Typography>
       </Box>
-    <Box  sx={{display:'flex',flexWrap:'wrap'}}>
+    <Box  sx={{display:'flex',flexWrap:'wrap',background:'red',width:'100%'}}>
       {dataitem? (dataitem.map((item,index)=>{
         return ( <Adminallproduct  getdata={getdata}  item={item}  key={index}/>)
       })):null}

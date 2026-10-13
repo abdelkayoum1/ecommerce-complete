@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 
 import AdminSidebar from "../../component/Admin/AdminSidebar";
@@ -7,6 +7,7 @@ import Paginationn from "../../component/utilite/Pagination";
 import Adminbrand from "../../component/Admin/Adminbrand";
 
 const Adminaddbrans = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <Row
       style={{
@@ -21,7 +22,7 @@ const Adminaddbrans = () => {
         }}
         className="admin-sidebar-column"
       >
-        <AdminSidebar />
+        <AdminSidebar  open={sidebarOpen}  setOpen={setSidebarOpen}/>
       </Col>
 
       <Col

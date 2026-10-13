@@ -26,7 +26,7 @@ useEffect(()=>{
   return (
     <>
 
-    <Box  sx={{fontWeight:'bold'}}>  عدد الطلبات #{results}</Box>
+    <Box  sx={{fontWeight:'bold',marginBottom:'55px'}}>  عدد الطلبات #{results}</Box>
       <div>
         <div
           className="div"

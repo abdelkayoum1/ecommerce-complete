@@ -10,6 +10,7 @@ import Useralloarderpage from "../../page/User/Useralloarderpage";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import UserAddadressepage from "../../page/User/UserAddadressepage";
+import '../../index.css'
 
 const Useraddadress = () => {
   return (
@@ -21,16 +22,19 @@ const Useraddadress = () => {
       }}
     >
       <Col
+      lg='auto'
         style={{
-          flex: "0 0 250px",
+          // flex: "0 0 250px",
         }}
+        className="desktop"
       >
         <UsersideBar />
       </Col>
 
       <Col
+      xs={12}
         style={{
-          flex: "1 1 auto",
+          // flex: "1 1 auto",
           minWidth: 0,
         }}
       >

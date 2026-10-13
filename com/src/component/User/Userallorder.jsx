@@ -10,7 +10,11 @@ import Useralloarderpage from "../../page/User/Useralloarderpage";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import '../../index.css'
+
 const Userallorder = ({getorder,results,Getorder}) => {
+   const [open, setOpen] = useState(false);
+
   return (
     <Row
       style={{
@@ -26,7 +30,7 @@ const Userallorder = ({getorder,results,Getorder}) => {
         }}
         className="desktop"
       >
-        <UsersideBar />
+        <UsersideBar  />
       </Col>
 
       <Col
