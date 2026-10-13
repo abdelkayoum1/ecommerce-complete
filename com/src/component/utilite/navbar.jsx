@@ -86,7 +86,7 @@ export default function Navbare({ products,datasearch,datacart }) {
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {token ? (
             <div className="dropdown">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button  style={{width:'100%'}} className="btn btn-secondary    dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {user.name}
   </button>
   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
