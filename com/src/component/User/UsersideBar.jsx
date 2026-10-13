@@ -53,7 +53,7 @@ const UsersideBar = ({open,setOpen}) => {
 
 {/* #responsive mobile */}
 
-<div  className='sidebar-mobile'>
+<div  className='sidebar-mobilee'  style={{marginTop:"80px"}}>
    <Navbar expand={false}   expanded={open} onToggle={setOpen} >
     <Container fluid>
       <Navbar.Toggle
