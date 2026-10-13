@@ -15,7 +15,7 @@ const AllBrand = () => {
   return (
     <div>
       الماركت
-        <Box  sx={{display:'flex',justifyContent:'center',flexWrap:'wrap', gap:2}}>   
+        <Box  sx={{display:'flex',justifyContent:'center',marginTop:'30px',flexWrap:'wrap', gap:2}}>   
 
      {loadingbrand ? (cptpagebrand>1 ? (  dataa.map((item,index)=>{
       return (<Brandcard  key={index}  img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`}/>)

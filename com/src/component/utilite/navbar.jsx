@@ -61,7 +61,7 @@ export default function Navbare({ products,datasearch,datacart }) {
   }
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
         background: "#22272b",
       }}

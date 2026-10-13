@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 
 
   import { ToastContainer, toast } from 'react-toastify';
-import Textfield from "@mui/material/TextField";
+import TextField from "@mui/material/TextField";
 
 import { Typography } from "@mui/material";
 import { useRef } from "react";
@@ -16,6 +16,7 @@ import { useNavigate,Link } from "react-router-dom";
 import notify from "../../hook/useNotification";
 import { Auth } from "./context/auth/authContext";
 import LoginHook from "../../hook/auth/LoginHook";
+import '../../style.css';
 
 const Login = () => {
  
@@ -35,8 +36,38 @@ const Login = () => {
 
   
   return (
-    <Container>
+    <>
+
+
+{/* 
+  <div className="box">
+        <div className="border-line"></div>
+        <form action="#">
+            <h2>Sign in</h2>
+            <div className="input-box">
+
+<input type="text"  required/>
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div className="input-box">
+<input type="password" required />
+
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div className="imp-links">
+                <a href="#">Forget Password</a>
+                <a href="#">Sign up</a>
+            </div>
+            <input type="submit"  value="login"  className="btn"/>
+        </form>
+    </div> */}
+    
+    <Box  className="boxx">
+       <div className="border-line"></div>
       <Box
+       className="login-form"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -45,7 +76,7 @@ const Login = () => {
           alignItems: "center",
         }}
       >
-        <Typography variant="h4">Login now</Typography>
+        <Typography  sx={{color:'white'}}   variant="h4">Login now</Typography>
 
         <Box
           sx={{
@@ -60,17 +91,23 @@ const Login = () => {
           }}
         >
           
-
-          <Textfield inputRef={emailref} label="email" />
-          <Textfield type="password" inputRef={passwordref} label="password" />
+ <div className="input-box">
+          <TextField   inputRef={emailref} label="email" fullWidth/>
+          </div>
+           <div className="input-box">
+          <TextField   type="password" inputRef={passwordref} label="password"fullWidth />
+          </div>
  
-         {loading ? (<Button variant="contained"> loading...</Button>): <Button onClick={onsubmit} variant="contained">
+         {loading ? (<Button variant="contained"> loading...</Button>): <Button  onClick={onsubmit} variant="contained">
             Login
           </Button>}
-          <Typography>not have account? <Button  onClick={()=>navigate('/register')}>Register</Button></Typography>
+         <Box className="imp-links">
+
+           <Typography  sx={{color:'white'}}>not have account? <Button  onClick={()=>navigate('/register')}>Register</Button></Typography>
                  <Button  sx={{color:'red'}} onClick={()=>navigate('/user/forgetpassword')}>هل نسيت كلمة السر</Button>
 
          
+         </Box>
           {succes && (
             <Typography
               sx={{
@@ -99,13 +136,14 @@ const Login = () => {
         </Box>
         <ToastContainer/>
       </Box>
-   <Link  to='/admin/allproducts'  style={{textDecoration:'none'}}>
+   {/* <Link  to='/admin/allproducts'  style={{textDecoration:'none'}}>
       <Typography  sx={{width:'100%',textAlign:'end',color:'blue',cursor:'pointer',textDecoration:'none'}}>الدخول بحساب الادمن</Typography>
    </Link  >
    <Link  to='/user/allorder'  style={{textDecoration:'none'}}>
             <Typography  sx={{width:'100%',textAlign:'end',color:'blue',cursor:'pointer'}}>الدخول بحساب المستخدم</Typography>
-</Link>
-    </Container>
+</Link> */}
+    </Box>
+      </>
   );
 };
 
