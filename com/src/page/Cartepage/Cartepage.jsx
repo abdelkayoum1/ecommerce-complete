@@ -48,11 +48,11 @@ console.log("carte",datacart)
 
 // },[])
  return (
-    <Container> 
-    <div>
-             <Typography  sx={{direction:'rtl',fontWeight:'bold'}}> عربة  التسوق</Typography>
+    <Container  > 
+    <div  >
+             <Typography  sx={{direction:'rtl',fontWeight:'bold',marginTop:'70px'}}> عربة  التسوق</Typography>
       
-      <Row  style={{direction:'rtl',display:'flex',justifyContent:'center',marginBottom:' 15px'}}>
+      <Row  style={{direction:'rtl',display:'flex',justifyContent:'center',marginBottom:'15px'}}>
         <Col  xs="12" md="9">
 
         {  products&& products.length>0 ? (products.map((item)=>{
