@@ -22,11 +22,11 @@ const router = express.Router();
 
 //   res.status(200).json({ received: true });
 // });
-router.post('/webhook-checkout', (req, res, next) => {
-  console.log('WEBHOOK ROUTE REACHED');
-  next();
-}, webhookCheckout);
-// router.post('/webhook-checkout', webhookCheckout);
+// router.post('/webhook-checkout', (req, res, next) => {
+//   console.log('WEBHOOK ROUTE REACHED');
+//   next();
+// }, webhookCheckout);
+router.post('/webhook-checkout', webhookCheckout);
 router.use(authController.auth);
 
 router.get('/checkout-session/:cartId', checkoutSession);
