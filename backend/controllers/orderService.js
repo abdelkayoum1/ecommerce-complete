@@ -144,9 +144,9 @@ exports.checkoutSession = asyncHandler(async (req, res, next) => {
         amount: cartPrice,
         currency: 'dzd',
         payment_method: 'edahabia',
-        success_url: 'http://localhost:3000/user/allorders',
-        failure_url: 'http://localhost:3000/cart',
-        webhook_endpoint: 'http://localhost:5000/api/v1/orders/webhook-checkout',
+        success_url: 'http://localhost:5173/user/allorder',
+        failure_url: 'http://localhost:5173/cart',
+        webhook_endpoint: 'https://ecommerce-complete-kbe3.onrender.com/api/v1/orders/webhook-checkout',
         description: `Order for ${req.user.name}`,
         locale: 'ar',
         metadata: 
@@ -237,6 +237,9 @@ const createOrderCheckout = async (checkout) => {
 exports.webhookCheckout = async(req, res, next) => {
  
   try {
+    console.log("WEBHOOK RECEIVED");
+console.log("EVENT TYPE:", req.body?.type);
+console.log("CHECKOUT DATA:", req.body?.data);
     const signature = req.headers.signature;
 
     if (!signature) {

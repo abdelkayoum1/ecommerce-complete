@@ -5,7 +5,7 @@ const Homecategoryhouk = () => {
   const color=["#FFD3E8","#F4DB45","#55CFDF","#FF6262","#0034ff","#FFD3E8"]
   const [dataa, setdata] = useState([]);
     const [loading, setloading] = useState(true);
-
+// https://ecommerce-complete-kbe3.onrender.com
   async function getdata() {
    try {
      const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {

@@ -32,7 +32,8 @@ const [results,setresullts]=useState("");
             })
         })
    console.log(crtorder)
-        if(crtorder && crtorder.status==="status"){
+        if(crtorder && crtorder.status===201){
+            console.log(crtorder.status)
             notify("تمت انشاء طلبك بنجاح","success")
            setTimeout(()=>{
      navigate("/user/allorder")
@@ -62,9 +63,47 @@ const [results,setresullts]=useState("");
         console.log(data.data)
     }
 
+    async function PymentMethode(id){
+        const pymentmethode=await fetch(`http://127.0.0.1:5000/api/v1/orders/checkout-session/${id}`,{
+            method:'GET',
+            headers:{
+                "Content-Type":'Application/json',
+                "Authorization":`Bearer ${localStorage.getItem("token")}`
+            },
+           
+        })
+                console.log(pymentmethode)
+
+       if(pymentmethode && pymentmethode.status===200){
+        console.log("22222222222222222")
+                    //  console.log(pymentmethode.session)
+
+            //  console.log(pymentmethode.session.checkout_url)
+             console.log("444444444444444444")
+
+        if(pymentmethode.status===200){
+            notify("تم انشاء طلبك بنجاح","success")
+        }else{
+                        notify("حدثت مشكلة في انشاء الطلب ","warn")
+
+        }
+        console.log(pymentmethode)
+       }
+        const data=await pymentmethode.json();
+         if(data.session){
+             console.log(data.session.checkout_url)
+setTimeout(()=>{
+            window.open(data.session.checkout_url)
+
+},1500)
+
+            }
+        console.log(data)
+    }
 
 
-    return [Crateodrer,Getorder,getorder,paginate,results]
+
+    return [Crateodrer,Getorder,getorder,paginate,results,PymentMethode]
 }
 
 export default CreateOrderHook
