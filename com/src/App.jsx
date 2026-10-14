@@ -83,7 +83,7 @@ function App() {
 
             {/* <Route element={<Protectedroute/>}> */}
             <Route
-              path="/"
+              path="/home"
               element={
                 <HomePage
                   favid={favid}
@@ -95,7 +95,7 @@ function App() {
               }
             />
              <Route
-              path="/initial"
+              path="/"
               element={
                 <Initialhomepage
                  
