@@ -63,7 +63,7 @@ const [Crateodrer]=CreateOrderHook();
   return (
     <>
     <div>
-        <Container  sx={{direction:'rtl',marginTop:'10px'}}> 
+        <Container  sx={{direction:'rtl',marginTop:'100px'}}> 
 
 
             <Typography  sx={{fontWeight:'bold'}}>اختر طريقة  الدفع </Typography>
