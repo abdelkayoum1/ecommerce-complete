@@ -19,7 +19,7 @@ const Useradressitem = ({itemadres,getalladress,adressuser,setadresuser}) => {
   return (
     <div>
       <div className="div">
-        <div className="div" style={{ background: "#f5f5f5", marginBottom:'20px',marginLeft:'100px',borderRadius:'5px'}}>
+        <div className="div" style={{ background: "#f5f5f5", marginBottom:'20px',width:"60%",marginLeft:'100px',borderRadius:'5px'}}>
           <div className=" div"  style={{display:'flex',justifyContent:'space-between',padding:'10px'}}>
             <Typography className="barnd-text" sx={{color:'black'}}>المدينة:{itemadres.alias}</Typography>
 

@@ -61,7 +61,7 @@ Getuserprefile()
           </Modal>
 
     <div  style={{position:'relative'}}>
-<div className="barnd-text div"  style={{fontWeight:'bold',marginBottom:'55px'}}>
+<div className="barnd-text div"  style={{fontWeight:'bold',marginTop:'70px'}}>
   
   الصفحة الرئيسية
   </div>  

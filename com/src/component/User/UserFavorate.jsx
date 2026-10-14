@@ -36,7 +36,7 @@ const UserFavorate = ({favid,setfavid,datafav,setdatafav}) => {
 //     },[datafav])
   return (
     <div  style={{marginBottom:'30px'}}>
-      <div className="admin-content-text  pb-4"  > المنتجات المفضلة</div>
+      <div className="admin-content-text  pb-4" style={{marginTop:'70px'}} > المنتجات المفضلة</div>
 
       <Row> 
 

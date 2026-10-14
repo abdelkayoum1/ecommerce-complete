@@ -15,7 +15,7 @@ useEffect(()=>{
 
   return (
     <div>
-      <div className="barnd-text div" style={{marginBottom:'56px',fontSize:'24px'}}>دفتر العناوين</div>
+      <div className="barnd-text div" style={{marginTop:'60px',fontSize:'24px'}}>دفتر العناوين</div>
 {adressuser.length>0? (     adressuser.map((itemadres)=>{
   return(<Useradressitem adressuser={adressuser} setadresuser={setadresuser} getalladress={getalladress}   itemadres={itemadres}  key={itemadres._id}/>)
 })
