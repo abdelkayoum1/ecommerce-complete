@@ -63,7 +63,7 @@ const UsersideBar = ({open,setOpen}) => {
 
       <Navbar.Collapse id="basic-navbar-nav" >
         <Nav className="flex-column w-100">
-           <Link  to='/user/allorder'  style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
+           <Link  to='/user/allorder' className='active' style={{textDecoration:'none',color:'black',fontWeight:'bold',fontSize:'15px'}}>
       <div  className=' barnd-text sidbare'style={{borderBottom:'1px solid black',cursor:'pointer',padding:'10px',textAlign:'center'}} >
       ادارة الطلبيات
     </div>

@@ -43,6 +43,7 @@ import AddtocartHook from "./hook/Cart/AddtocartHook";
 import { useEffect } from "react";
 import CreateOrderHook from "./hook/Order/CreateOrderHook";
 import Carousel from "./component/product/carousel";
+import Initialhomepage from "./page/home/initialhomepage";
 
 function App() {
   const [
@@ -90,6 +91,14 @@ function App() {
                   setdatafav={setdatafav}
                   setfavid={setfavid}
                   dataproduct={dataproduct}
+                />
+              }
+            />
+             <Route
+              path="/initial"
+              element={
+                <Initialhomepage
+                 
                 />
               }
             />
