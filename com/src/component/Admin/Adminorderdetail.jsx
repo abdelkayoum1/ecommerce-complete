@@ -10,17 +10,17 @@ import Updatepay from '../../hook/Admin/Updatepay'
 import notify from '../../hook/useNotification'
 import { ToastContainer } from 'react-toastify'
 
-const Adminorderdetail = () => {
+const Adminorderdetail = ({getorderOne,oneorder}) => {
 
   const {id}=useParams()
 
-  const  [getorderOne,oneorder]=GetOrderOne()
+  // const  [getorderOne,oneorder]=GetOrderOne()
   console.log(oneorder)
   console.log(id)
-  useEffect(()=>{
-    getorderOne(id)
+  // useEffect(()=>{
+  //   getorderOne(id)
    
-  },[id])
+  // },[id])
     function handlechangepay(e){
      
     setchangepay(e.target.value)

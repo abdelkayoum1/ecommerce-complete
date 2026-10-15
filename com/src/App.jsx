@@ -124,7 +124,7 @@ function App() {
             <Route path="/order/pyment" element={<Pyment   datacart={datacart}/>} />
             <Route path="/admin/allproducts" element={<AdminAllproduct />} />
             <Route path="/admin/allorder" element={<AdminAllorder  Getorder={Getorder} results={results} paginate={paginate}   getorder={getorder} />} />
-            <Route path="/admin/allorder/:id" element={<Adminorderdetailpage loading={loading}/>} />
+            <Route path="/admin/allorder/:id" element={<Adminorderdetailpage  oneorder={oneorder} getorderOne={getorderOne} loading={loading}/>} />
 
             <Route path="/admin/addbrand" element={<Adminaddbrans />} />
 
