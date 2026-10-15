@@ -202,7 +202,9 @@ z-index: auto !important;
     width: 100% !important;
   }
  
-
+ .carteitem{
+      margin-top: '200px';
+    }
  
 }
 @media(min-width: 995px) {
@@ -211,6 +213,9 @@ z-index: auto !important;
     }
     .sidebar-desktop{
         display: block !important;
+    }
+    .carteitem{
+      margin-top: '200px';
     }
      .desktop{
     flex: 0 0 250px !important;

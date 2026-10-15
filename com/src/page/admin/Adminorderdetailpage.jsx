@@ -38,12 +38,13 @@ console.log("loadinfg")
       xs={12}
         style={{
           // flex: "1 1 auto",
+          marginTop:'80px',
           minWidth: 0,
         }}
         className="admin-orders-column"
       >
          
-         {loading===true ? <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box>
+         {loading===true ? <Box  sx={{width:'100%',display:'flex',justifyContent:'center',marginTop:'100px'}}><Spinner animation="border"   variant="primary" /></Box>
          
          :        <Adminorderdetail  getorderOne={getorderOne} oneorder={oneorder}/>
 }

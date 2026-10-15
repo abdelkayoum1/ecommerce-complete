@@ -7,7 +7,7 @@ import Admindetailperson from "../../component/Admin/Admindetailperson";
 import Paginationn from '../../component/utilite/Pagination';
 import Box from '@mui/material/Box';
 import '../../index.css';
-const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
+const AdminAllorderpage = ({Getorder,getorder,paginate,loading,getorderOne,oneorder}) => {
   console.log(getorder)
 
   useEffect(()=>{
@@ -44,7 +44,7 @@ const AdminAllorderpage = ({Getorder,getorder,paginate}) => {
           <div  className='barnd-text' style={{direction:'rtl',fontWeight:'bold',marginBottom:'40px', fontSize:'24px'}}>  ادارة الطلبيات</div>
        {getorder&&  getorder.length>0? (
         getorder.map((item)=>{
-          return ( <AdminAllorder  item={item}   />)
+          return ( <AdminAllorder loading={loading} getorderOne={getorderOne}oneorder={oneorder}  item={item}   />)
         })
        ):null}
         {/* <AdminAllorder />
