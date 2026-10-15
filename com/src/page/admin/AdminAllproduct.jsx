@@ -37,7 +37,7 @@ const AdminAllproduct = () => {
         }}
          className="admin-products-column"
       >
-{loading? ( <Box sx={{width:"100%",display:'flex',justifyContent:'center',alignItems:'center',marginTop:'10px'}}> <Spinner/> </Box>
+{loading? ( <Box sx={{width:"100%",display:'flex',justifyContent:'center',alignItems:'center',marginTop:'100px'}}> <Spinner/> </Box>
 ):<Adminallproducts dataitem={dataa}  getdata={getdata}/>}
   {cptpage>1 ?  (<Paginationn pageCount={cptpage} onpress={handlepage} />):null}      </Col>
     </Row>
