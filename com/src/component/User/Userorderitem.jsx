@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 const Userorderitem = ({getorder}) => {
 
   console.log(getorder.product.imageCover)
+
+  if(!getorder.product._id)return;
   return (
 <>
   <Box
