@@ -21,12 +21,12 @@ const Userorderitem = ({getorder}) => {
  
         <Box>
           <Typography  sx={{color:'grey'}}>
-     {getorder.product.title}
+     {getorder.product?.title || ""}
           </Typography>
           <Box  sx={{display:'flex',gap:2}}>
             {/* <Typography sx={{color:'grey'}}>{getorder.product.color}</Typography> */}
-             <Typography sx={{color:'wheat'}}>{getorder.product.ratingsAverage ||0}</Typography>
-              <Typography sx={{color:'grey'}}>{ `${getorder.product.ratingsQuantity} تقييم`}</Typography>
+             <Typography sx={{color:'wheat'}}>{getorder.product?.ratingsAverage ||0}</Typography>
+              <Typography sx={{color:'grey'}}>{ `${getorder.product?.ratingsQuantity ||""} تقييم `}</Typography>
           </Box>
 
            <Box  sx={{display:'flex',gap:2,marginTop:'10px'}}>

@@ -22,7 +22,7 @@ const UsercartItemorder = ({getorder,results}) => {
     
 
      {getorder && getorder.cartItems?.length>0? (
-      getorder.cartItems.map((item)=>{
+      getorder?.cartItems?.map((item)=>{
     return (<Userorderitem getorder={item}  key={item._id}   results={results}/>)
       })
      ):null}
