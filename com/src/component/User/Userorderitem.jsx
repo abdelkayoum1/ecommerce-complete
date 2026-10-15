@@ -15,7 +15,7 @@ const Userorderitem = ({getorder}) => {
   <Box
         sx={{ display: "flex", alignItems: "center",gap:5, justifyContent: "start" }}
       >
-      {getorder && getorder.product._id ? (<Link to={`/products/${getorder.product._id}`}>
+      {getorder && getorder.product._id ? (<Link to={`https://ecommerce-complete-kbe3.onrender.com/products/${getorder.product._id}`}>
         <img src={ `https://ecommerce-complete-kbe3.onrender.com/images/${getorder.product.imageCover}`} alt="" width="100px" />
        </Link>):null}
  
