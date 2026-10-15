@@ -61,7 +61,7 @@ const Adminorderdetail = ({getorderOne,oneorder}) => {
      <UsercartItemorder    getorder={oneorder}/>
    </Box>
 
-            <Box  className="تفاصيل" sx={{background:'white',width:'80%',padding:'10px',marginTop:'20px',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',borderRadius:'10px',height:'210px'}}>
+            <Box  className="تفاصيل" sx={{background:'white',padding:'10px',marginTop:'20px',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',borderRadius:'10px',height:'210px'}}>
 
 
          <Typography  sx={{fontWeight:'bold',fontSize:'24px'}}>تفاصيل العميل</Typography>
