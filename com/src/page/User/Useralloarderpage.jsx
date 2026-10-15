@@ -28,13 +28,13 @@ useEffect(()=>{
 
     <Box  sx={{fontWeight:'bold',marginTop:'60px'}}>  عدد الطلبات #{results}</Box>
       <div>
-        <div
+        {/* <div
           className="div"
           style={{ marginTop: "5px", fontSize: "20px", fontWeight: "bold" }}
         >
           {" "}
         {user.name}
-        </div>
+        </div> */}
                  {getorder && getorder.length>0 ? (
                   getorder.map((item)=>{
                     return ( <UsercartItemorder  results={results} getorder={item} />)
