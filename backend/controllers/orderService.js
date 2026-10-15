@@ -235,96 +235,96 @@ const createOrderCheckout = async (checkout) => {
 // @route   PUT /webhook-checkout
 // @access  From stripe
 
-exports.webhookCheckout = async (req, res) => {
-  try {
-    console.log('وصل الإشعار', new Date().toISOString());
-
-    // 1) قراءة التوقيع من الترويسة
-    const signature = req.get('signature');
-    if (!signature) {
-      return res.status(400).json({ message: 'التوقيع غير موجود' });
-    }
-
-    // 2) النص الخام (Buffer)
-    const rawBody = req.body;
-
-    // 3) حساب التوقيع بالمفتاح السري
-    const computedSignature = crypto
-      .createHmac('sha256', process.env.Chargily_SECRET_KEY)
-      .update(rawBody)
-      .digest('hex');
-
-    // 4) مقارنة آمنة
-    const a = Buffer.from(signature, 'utf8');
-    const b = Buffer.from(computedSignature, 'utf8');
-    if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) {
-      return res.status(403).json({ message: 'التوقيع غير صحيح' });
-    }
-
-    // 5) تحويل النص إلى كائن بعد التحقق
-    const event = JSON.parse(rawBody.toString('utf8'));
-
-    if (event.type === 'checkout.paid') {
-      await createOrderCheckout(event.data);
-    }
-
-    if (event.type === 'checkout.failed') {
-      console.log('فشلت عملية الدفع:', event.data.id);
-    }
-
-    res.status(200).json({});
-  } catch (error) {
-    console.error('خطأ في الإشعار:', error);
-    res.status(500).json({ message: error.message });
-  }
-};
-// exports.webhookCheckout = async(req, res, next) => {
- 
+// exports.webhookCheckout = async (req, res) => {
 //   try {
-//     console.log("WEBHOOK RECEIVED");
-// console.log("EVENT TYPE:", req.body?.type);
-// console.log("CHECKOUT DATA:", req.body?.data);
-//     const signature = req.headers.signature;
+//     console.log('وصل الإشعار', new Date().toISOString());
 
+//     // 1) قراءة التوقيع من الترويسة
+//     const signature = req.get('signature');
 //     if (!signature) {
-//       return res.status(400).json({ message: 'Missing signature' });
+//       return res.status(400).json({ message: 'التوقيع غير موجود' });
 //     }
 
-//     const payload = JSON.stringify(req.body);
+//     // 2) النص الخام (Buffer)
+//     const rawBody = req.body;
 
+//     // 3) حساب التوقيع بالمفتاح السري
 //     const computedSignature = crypto
 //       .createHmac('sha256', process.env.Chargily_SECRET_KEY)
-//       .update(payload)
+//       .update(rawBody)
 //       .digest('hex');
 
-//     if (signature !== computedSignature) {
-//       return res.status(403).json({ message: 'Invalid signature' });
+//     // 4) مقارنة آمنة
+//     const a = Buffer.from(signature, 'utf8');
+//     const b = Buffer.from(computedSignature, 'utf8');
+//     if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) {
+//       return res.status(403).json({ message: 'التوقيع غير صحيح' });
 //     }
 
-//     const event = req.body;
+//     // 5) تحويل النص إلى كائن بعد التحقق
+//     const event = JSON.parse(rawBody.toString('utf8'));
 
 //     if (event.type === 'checkout.paid') {
-//       const checkout = event.data;
-
-//       console.log('Payment successful:', checkout.id);
-      
-//       // هنا لاحقًا نحدّث Order إلى paid
-
-
-//   await createOrderCheckout(checkout);
+//       await createOrderCheckout(event.data);
 //     }
 
 //     if (event.type === 'checkout.failed') {
-//       const checkout = event.data;
-
-//       console.log('Payment failed:', checkout.id);
+//       console.log('فشلت عملية الدفع:', event.data.id);
 //     }
 
 //     res.status(200).json({});
 //   } catch (error) {
-//     res.status(500).json({
-//       message: error.message,
-//     });
+//     console.error('خطأ في الإشعار:', error);
+//     res.status(500).json({ message: error.message });
 //   }
 // };
+exports.webhookCheckout = async(req, res, next) => {
+ 
+  try {
+    console.log("WEBHOOK RECEIVED");
+console.log("EVENT TYPE:", req.body?.type);
+console.log("CHECKOUT DATA:", req.body?.data);
+    const signature = req.headers.signature;
+
+    if (!signature) {
+      return res.status(400).json({ message: 'Missing signature' });
+    }
+
+    const payload = req.body;
+
+    const computedSignature = crypto
+      .createHmac('sha256', process.env.Chargily_SECRET_KEY)
+      .update(payload)
+      .digest('hex');
+
+    if (signature !== computedSignature) {
+      return res.status(403).json({ message: 'Invalid signature' });
+    }
+
+    const event =JSON.parse(payload.toString("utf8"))
+
+    if (event.type === 'checkout.paid') {
+      const checkout = event.data;
+
+      console.log('Payment successful:', checkout.id);
+      
+      // هنا لاحقًا نحدّث Order إلى paid
+
+
+  await createOrderCheckout(checkout);
+    }
+
+    if (event.type === 'checkout.failed') {
+      const checkout = event.data;
+
+      console.log('Payment failed:', checkout.id);
+    }
+
+    res.status(200).json({});
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
 
