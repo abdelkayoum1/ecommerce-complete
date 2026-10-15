@@ -123,7 +123,7 @@ export default function Navbare({ products,datasearch,datacart }) {
 
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <img src={Logo} alt="logo" width={60} />
+          <img src={Logo} alt="logo" width={60}  style={{cursor:'pointer'}} onClick={()=>{navigate("/")}} />
         </Box>
       </Toolbar>
     </AppBar>
