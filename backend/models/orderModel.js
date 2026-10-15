@@ -40,7 +40,7 @@ const orderSchema = new mongoose.Schema(
     },
     paymentMethodType: {
       type: String,
-      enum: ['card', 'cash'],
+       enum: ['card', 'cash', 'edahabia', 'cib'],
       default: 'cash',
     },
     isPaid: {
