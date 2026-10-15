@@ -30,7 +30,7 @@ const UsercartItemorder = ({getorder,results}) => {
         
  
           
-          <Box  sx={{display:'flex',justifyContent:'space-between'}}>
+          <Box  sx={{display:'flex',justifyContent:'space-between',gap:5}}>
            <Box  sx={{gap:5,display:'flex'}}>
              <Box  sx={{display:'flex',gap:1}}>
               <Typography  sx={{fontWeight:'bold'}}>  التوصيل</Typography>
