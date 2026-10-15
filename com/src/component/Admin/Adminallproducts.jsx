@@ -8,7 +8,7 @@ const Adminallproducts = ({dataitem,getdata}) => {
       <Box  >   
         <Typography  sx={{fontWeight:'bold'}}>ادارة جميع المنتجات</Typography>
       </Box>
-    <Box  sx={{display:'flex',flexWrap:'wrap',background:'white',width:'100%',marginTop:'50px'}}>
+    <Box  sx={{display:'flex',flexWrap:'wrap',background:'white',width:'80%',marginTop:'50px'}}>
       {dataitem? (dataitem.map((item,index)=>{
         return ( <Adminallproduct  getdata={getdata}  item={item}  key={index}/>)
       })):null}
