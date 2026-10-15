@@ -14,7 +14,7 @@ const UsercartItemorder = ({getorder,results}) => {
   return (
     <>
           
-            <Box  sx={{width:'80%',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
+            <Box  sx={{width:'80%',background:'red',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
               
                              <Box className="div"  sx={{color:'black',fontWeight:'bold'}}> طلب من {getorder.user?.name || ""}</Box>
 
@@ -31,7 +31,7 @@ const UsercartItemorder = ({getorder,results}) => {
  
           
           <Box  sx={{display:'flex',justifyContent:'space-between'}}>
-           <Box  sx={{gap:2,display:'flex'}}>
+           <Box  sx={{gap:5,display:'flex'}}>
              <Box  sx={{display:'flex',gap:1}}>
               <Typography  sx={{fontWeight:'bold'}}>  التوصيل</Typography>
               <Typography  sx={{color:'grey'}}>{getorder.isDelivered===true?'تم ':'لم يتم '} </Typography>
