@@ -56,7 +56,7 @@ const Adminorderdetail = ({getorderOne,oneorder}) => {
 
     <div>
    
-   <Box className="carteitem"  sx={{background:'white',width:'80%',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',marginLeft:'90px',borderRadius:'5px',padding:'4px'}}> 
+   <Box className="carteitem"  sx={{background:'white',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',marginLeft:'90px',borderRadius:'5px',padding:'4px'}}> 
 
      <UsercartItemorder    getorder={oneorder}/>
    </Box>
