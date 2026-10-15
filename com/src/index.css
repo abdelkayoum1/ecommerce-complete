@@ -205,6 +205,9 @@ z-index: auto !important;
  .carteitem{
       margin-top: '200px';
     }
+    .تفاصيل{
+      width: 70%;
+    }
  
 }
 @media(min-width: 995px) {
