@@ -40,6 +40,7 @@ console.log("loadinfg")
           // flex: "1 1 auto",
           marginTop:'80px',
           minWidth: 0,
+          
         }}
         className="admin-orders-column"
       >
