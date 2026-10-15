@@ -10,7 +10,7 @@ import { Typography } from '@mui/material';
 
 const AdminaAllOrder = ({item}) => {
 
-  // console.log(item.user.name)
+  console.log(item)
     return (
       <>
       

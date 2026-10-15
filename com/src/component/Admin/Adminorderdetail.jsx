@@ -67,7 +67,10 @@ const Adminorderdetail = () => {
 
         <Box sx={{display:'flex',gap:1}}>
         <Typography  sx={{fontWeight:'bold'}}> الاسم:</Typography>
-        <Typography  sx={{color:'grey'}}> {oneorder.user?.name||'' }</Typography>
+        <Typography  sx={{color:'grey'}}> 
+          {oneorder.user?.name||'' }
+          
+          </Typography>
 
 
         </Box>
