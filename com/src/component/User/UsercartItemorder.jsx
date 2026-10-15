@@ -14,7 +14,7 @@ const UsercartItemorder = ({getorder,results}) => {
   return (
     <>
           
-            <Box  sx={{background:'#f5f5f5',width:'80%',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
+            <Box  sx={{background:'#f5f5f5',width:'100%',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
               
                              <Box className="div"  sx={{color:'black',fontWeight:'bold'}}> طلب من {getorder.user?.name || ""}</Box>
 
