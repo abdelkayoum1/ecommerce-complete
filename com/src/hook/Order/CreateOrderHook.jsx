@@ -64,7 +64,7 @@ const [results,setresullts]=useState("");
     }
 
     async function PymentMethode(id){
-        const pymentmethode=await fetch(`http://127.0.0.1:5000/api/v1/orders/checkout-session/${id}`,{
+        const pymentmethode=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders/checkout-session/${id}`,{
             method:'GET',
             headers:{
                 "Content-Type":'Application/json',
