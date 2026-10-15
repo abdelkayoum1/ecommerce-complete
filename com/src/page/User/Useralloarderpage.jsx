@@ -7,10 +7,20 @@ import UsercartItemorder from "../../component/User/UsercartItemorder";
 import Typography from "@mui/material/Typography";
 import Getuseradress from "../../hook/Adress/Getuseradress";
 import CreateOrderHook from "../../hook/Order/CreateOrderHook";
+import { useParams } from "react-router-dom";
+import GetOrderOne from "../../hook/Order/GetOrderOne";
 
 const Useralloarderpage = ({getorder,results,Getorder}) => {
   // const [getuseradresse,getuserdata]=Getuseradress();
 
+  const {id}=useParams()
+  console.log(id)
+const  [getorderOne,oneorder,loading]=GetOrderOne()
+
+useEffect(()=>{
+  getorderOne(id);
+  
+},[id])
   // useEffect(()=>{
     // const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
 
@@ -35,11 +45,18 @@ useEffect(()=>{
           {" "}
         {user.name}
         </div> */}
-                 {getorder && getorder.length>0 ? (
+        {loading ===true ? <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box>
+        
+        :  getorder && getorder.length>0 ? (
                   getorder?.map((item)=>{
                     return ( <UsercartItemorder  results={results} getorder={item} />)
                   })
                  ):null}
+                 {/* getorder && getorder.length>0 ? (
+                  getorder?.map((item)=>{
+                    return ( <UsercartItemorder  results={results} getorder={item} />)
+                  })
+                 ):null */}
 
       
       </div>

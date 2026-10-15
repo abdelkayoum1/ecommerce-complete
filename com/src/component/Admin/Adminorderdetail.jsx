@@ -19,6 +19,7 @@ const Adminorderdetail = () => {
   console.log(id)
   useEffect(()=>{
     getorderOne(id)
+   
   },[id])
     function handlechangepay(e){
      
@@ -57,7 +58,7 @@ const Adminorderdetail = () => {
    
    <Box  sx={{background:'white',marginTop:'100px',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}> 
 
-     <UsercartItemorder  getorder={oneorder}/>
+     <UsercartItemorder    getorder={oneorder}/>
    </Box>
 
             <Box  sx={{background:'white',marginLeft:'100px',padding:'10px',marginTop:'20px',boxShadow:'0 15px 15px rgb(22,15,15,0.5)',borderRadius:'10px',height:'210px'}}>

@@ -43,6 +43,7 @@ import AddtocartHook from "./hook/Cart/AddtocartHook";
 import { useEffect } from "react";
 import CreateOrderHook from "./hook/Order/CreateOrderHook";
 import Carousel from "./component/product/carousel";
+import GetOrderOne from "./hook/Order/GetOrderOne";
 
 function App() {
   const [
@@ -58,6 +59,7 @@ function App() {
     
  const [isvalid,setproducts,products,settotalAfterDiscount,totalAfterDiscount,coupon,setcoupoun,Updatecoupon,changecolor,addtocarte,indexcolor,color,datacart,Gettocart,Removeallcart,setdatacart,Deletecart,count,setcount,Updatecarteitem]=AddtocartHook({dataproduct});
  const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
+ const  [getorderOne,oneorder,loading]=GetOrderOne()
  useEffect(()=>{
   Gettocart()
  },[])
@@ -122,7 +124,7 @@ function App() {
             <Route path="/order/pyment" element={<Pyment   datacart={datacart}/>} />
             <Route path="/admin/allproducts" element={<AdminAllproduct />} />
             <Route path="/admin/allorder" element={<AdminAllorder  Getorder={Getorder} results={results} paginate={paginate}   getorder={getorder} />} />
-            <Route path="/admin/allorder/:id" element={<Adminorderdetailpage />} />
+            <Route path="/admin/allorder/:id" element={<Adminorderdetailpage loading={loading}/>} />
 
             <Route path="/admin/addbrand" element={<Adminaddbrans />} />
 
