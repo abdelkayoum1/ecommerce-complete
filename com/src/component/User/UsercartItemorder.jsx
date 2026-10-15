@@ -34,11 +34,11 @@ const UsercartItemorder = ({getorder,results}) => {
            <Box  sx={{gap:2,display:'flex'}}>
              <Box  sx={{display:'flex',gap:1}}>
               <Typography  sx={{fontWeight:'bold'}}>  التوصيل</Typography>
-              <Typography  sx={{color:'grey'}}>{getorder.isDelivered===true?'تم التوصيل':'لم يتم التوصيل'} </Typography>
+              <Typography  sx={{color:'grey'}}>{getorder.isDelivered===true?'تم ':'لم يتم '} </Typography>
             </Box>
              <Box  sx={{display:'flex',gap:1}}>
               <Typography  sx={{fontWeight:'bold'}}>  الدفع</Typography>
-              <Typography  sx={{color:'grey'}}>{getorder.isPaid===true?'تم الدفع':'لم يتم الدفع'} </Typography>
+              <Typography  sx={{color:'grey'}}>{getorder.isPaid===true?'تم ':'لم يتم '} </Typography>
             </Box>
              <Box  sx={{display:'flex',gap:1}}>
               <Typography  sx={{fontWeight:'bold'}}>  الدفع</Typography>
