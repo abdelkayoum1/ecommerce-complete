@@ -204,6 +204,7 @@ z-index: auto !important;
  
  .carteitem{
       margin-top: '200px';
+      width: 100%;
     }
     .تفاصيل{
       width: 100%;
@@ -219,7 +220,7 @@ z-index: auto !important;
     }
     .carteitem{
       margin-top: '200px';
-      width: 100%;
+      
     }
      .desktop{
     flex: 0 0 250px !important;
