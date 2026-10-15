@@ -27,6 +27,14 @@ const connectdb=require('./Config/connexion')
 
 
 connectdb();
+const { webhookCheckout } = require('./controllers/orderService');
+
+// لازم يكون قبل app.use(express.json())
+app.post(
+  '/api/v1/orders/webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  webhookCheckout
+);
 app.use(express.json())
 app.use(cors());
 app.use('/images', express.static('public/images'));

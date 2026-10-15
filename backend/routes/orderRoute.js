@@ -26,7 +26,7 @@ const router = express.Router();
 //   console.log('WEBHOOK ROUTE REACHED');
 //   next();
 // }, webhookCheckout);
-router.post('/webhook-checkout', webhookCheckout);
+// router.post('/webhook-checkout', webhookCheckout);
 router.use(authController.auth);
 
 router.get('/checkout-session/:cartId', checkoutSession);
