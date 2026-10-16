@@ -30,7 +30,7 @@ const AddCategoryhook = () => {
         method: "POST",
         body: formdata,
         headers:{
-          "Autorization":`Bearer ${localStorage.getItem("token")}`
+          "Authorization":`Bearer ${localStorage.getItem("token")}`
         }
       },
     );
