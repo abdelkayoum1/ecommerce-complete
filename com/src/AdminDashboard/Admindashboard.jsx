@@ -233,7 +233,7 @@ function StatCard({ item }) {
           <div className="ad-product-list">
             {topproduct.map((product) => (
               <div className="ad-product-row" key={product.name}>
-                <img src={`http://localhost:5000/images/${product.image}`}  />
+                <img src={`https://ecommerce-complete-kbe3.onrender.com/images/${product.image}`}  />
 
                 <div className="ad-product-info">
                   <strong>{product.name}</strong>
