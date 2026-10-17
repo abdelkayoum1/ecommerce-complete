@@ -64,7 +64,7 @@ const [results,setresullts]=useState("");
 // https://ecommerce-complete-kbe3.onrender.com
  async function Getorder(page=1){
 
-        const getordere=await fetch(`http://localhost:5000/api/v1/orders?limit=4&page=${page}`,{
+        const getordere=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders?limit=4&page=${page}`,{
             method:'GET',
             headers:{
                 "Content-Type":"Application/json",
