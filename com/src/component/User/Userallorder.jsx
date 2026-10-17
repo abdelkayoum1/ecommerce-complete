@@ -12,9 +12,8 @@ import Box from '@mui/material/Box';
 
 import '../../index.css'
 
-const Userallorder = ({getorder,results,Getorder}) => {
+const Userallorder = ({getorder,results,Getorder,paginate}) => {
   //  const [open, setOpen] = useState(false);
-
   return (
     <Row
       style={{
@@ -41,7 +40,7 @@ const Userallorder = ({getorder,results,Getorder}) => {
           minWidth: 0,
         }}
       >
-       <Useralloarderpage Getorder={Getorder}  results={results}  getorder={getorder}/>
+       <Useralloarderpage Getorder={Getorder}  results={results}paginate={paginate}  getorder={getorder}/>
        
       </Col>
      

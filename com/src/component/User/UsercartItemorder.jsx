@@ -14,7 +14,7 @@ const UsercartItemorder = ({getorder,results}) => {
   return (
     <>
           
-            <Box  sx={{width:'80%',background:'white',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
+            <Box  sx={{width:'80%',background:'#f5f5f5',marginBottom:'15px',marginLeft:'100px',borderRadius:'5px',padding:'4px'}}>
               
                              <Box className="div"  sx={{color:'black',fontWeight:'bold'}}> طلب من {getorder.user?.name || ""}</Box>
 
@@ -45,7 +45,7 @@ const UsercartItemorder = ({getorder,results}) => {
               <Typography  sx={{color:'grey'}}>{getorder.paymentMethodType==="cash"?'كاش ':' بطاقة دهبية '} </Typography>
             </Box>
            </Box>
-            <Typography>{getorder.totalOrderPrice||0} جنيه</Typography>
+            <Typography>{getorder.totalOrderPrice||0} دج</Typography>
           </Box>
    </Box>
     </>

@@ -139,7 +139,7 @@ function App() {
                         <Route path="/admin/addcoupoun" element={<Adminaddcoupounpage />} />
 
             <Route path="/admin/addproduct/:id" element={<AdminAddproduct />} />
-            <Route path="/user/allorder" element={<Userallorder  Getorder={Getorder} results={results}   getorder={getorder}/>} />
+            <Route path="/user/allorder" element={<Userallorder  Getorder={Getorder} results={results} paginate={paginate}   getorder={getorder}/>} />
             <Route
               path="/user/favorate"
               element={

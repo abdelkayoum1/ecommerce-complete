@@ -10,9 +10,11 @@ import CreateOrderHook from "../../hook/Order/CreateOrderHook";
 import { useParams } from "react-router-dom";
 import GetOrderOne from "../../hook/Order/GetOrderOne";
 import { Spinner } from "react-bootstrap";
+import Paginationn from "../../component/utilite/Pagination";
 
-const Useralloarderpage = ({getorder,results,Getorder}) => {
+const Useralloarderpage = ({getorder,results,Getorder,paginate}) => {
   // const [getuseradresse,getuserdata]=Getuseradress();
+  console.log("orderssssssssss",getorder.length)
 
   const {id}=useParams()
   console.log(id)
@@ -58,6 +60,9 @@ useEffect(()=>{
                     return ( <UsercartItemorder  results={results} getorder={item} />)
                   })
                  ):null */}
+
+               <Box  sx={{position:'absolute', right:'40%'}}>  { paginate>=4 ? (<Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate}/>):null}</Box>
+                 {/* <Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate}/> */}
 
       
       </div>
