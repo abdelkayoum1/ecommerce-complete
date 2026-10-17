@@ -20,12 +20,12 @@ const CreateCouponHook = () => {
         notify("من فضلك ادخل خصم كوبون");
         return;
       }
-  
+  // https://ecommerce-complete-kbe3.onrender.com
       const crtcoupn = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/coupons", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Authorization": `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({
           name,

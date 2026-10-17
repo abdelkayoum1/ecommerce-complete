@@ -48,7 +48,7 @@ async function handlepayer(){
                         }}
                         
                     />
-                    <Button  variant='contained' className="copon-btn d-inline "  onClick={()=>Updatecoupon(coupon)}>تطبيق</Button>
+                    <button  variant='contained' className="copon-btn d-inline "style={{background:'black',padding:'5px',color:'white',borderRadius:'5px',marginLeft:'5px'}}  onClick={()=>Updatecoupon(coupon)}>تطبيق</button>
                 </div>
                 <div className="product-price d-inline w-100 my-3  border"  style={{background:'white',padding:'5px',borderRadius:'5px',textAlign:'center'}}>
                     {/* {`${datacart.totalCartPrice}`} جنية */}

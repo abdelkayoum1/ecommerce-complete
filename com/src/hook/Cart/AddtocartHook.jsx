@@ -102,12 +102,13 @@ async function Gettocart() {
  async function Updatecoupon(coupon) {
  
 
-    
-     const updatecoupon = await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/cart/applyCoupon`, {
+    // https://ecommerce-complete-kbe3.onrender.com
+     const updatecoupon = await fetch(`    https://ecommerce-complete-kbe3.onrender.com
+/api/v1/cart/applyCoupon`, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
-        "Authorization": `Bearer ${localStorage.getItem("token")} `,
+        "Authorization":`Bearer ${localStorage.getItem("token")} `
       },
       body: JSON.stringify({
        couponName:coupon
