@@ -212,7 +212,7 @@ z-index: auto !important;
     }
     .paginate{
       position: absolute;
-      left:15%;
+      left:10%;
       background: red;
       width: 100%;
     }
