@@ -5,10 +5,12 @@ const ViewsSearchproductHome = () => {
           const [dataproduct,setdataproduct]=useState([]);
               const [pagination,setpagination]=useState('');
               const [paginationpage,setpaginationpage]=useState('');
+                        const [dataproducts,setdataproducts]=useState([]);
 
-    async function  getdataproduct(){
 
+    async function  getdataproducts(){
 
+// https://ecommerce-complete-kbe3.onrender.com
   try {
      const prod=await fetch('https://ecommerce-complete-kbe3.onrender.com/api/v1/product',{
     method:'GET',
@@ -18,7 +20,8 @@ const ViewsSearchproductHome = () => {
    console.log(data.data)
    console.log(data.data[0].imageCover)
     
-   setdataproduct(data.data)
+   setdataproducts(data.data)
+   console.log(data.data)
   //  setpagination()
   } catch (error) {
     console.log(error)
@@ -107,7 +110,7 @@ let limit=4;
   },[])
 
   
-  return [dataproduct,getdataproductsearch,getdatasearch,pagination,paginationpage];
+  return [dataproduct,getdataproductsearch,getdatasearch,pagination,paginationpage,dataproducts,getdataproducts];
 }
 
 export default ViewsSearchproductHome;

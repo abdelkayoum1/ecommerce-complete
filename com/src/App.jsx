@@ -44,21 +44,19 @@ import { useEffect } from "react";
 import CreateOrderHook from "./hook/Order/CreateOrderHook";
 import Carousel from "./component/product/carousel";
 import GetOrderOne from "./hook/Order/GetOrderOne";
+import AdminDashboard from "./AdminDashboard/Admindashboard";
+import Getalluser from "./hook/User/Getalluser";
 
 function App() {
-  const [
-    dataproduct,
-    getdataproductsearch,
-    getdatasearch,
-    pagination,
-    paginationpage,
-  ] = ViewsSearchproductHome();
+  const [dataproduct,getdataproductsearch,getdatasearch,pagination,paginationpage,dataproducts,getdataproducts] = ViewsSearchproductHome();
   const [favid, setfavid, getallreviews, datafav, setdatafav] =
     Getallreviewsfavorate();
+
+    const [user,Getuserlength]=Getalluser();
       // const [getalladress,adduseradres,adressuser,setadresuser,home,details,phone,city,postalcode,setcodepostal,setcity,setphone,setdetails,sethome]=userAddadressesHook();
     
  const [isvalid,setproducts,products,settotalAfterDiscount,totalAfterDiscount,coupon,setcoupoun,Updatecoupon,changecolor,addtocarte,indexcolor,color,datacart,Gettocart,Removeallcart,setdatacart,Deletecart,count,setcount,Updatecarteitem]=AddtocartHook({dataproduct});
- const [Crateodrer,Getorder,getorder,paginate,results]=CreateOrderHook()
+ const [Crateodrer,Getorder,getorder,paginate,results,PymentMethode,getorderlength,Getorderlength]=CreateOrderHook()
  const  [getorderOne,oneorder,loading]=GetOrderOne()
  useEffect(()=>{
   Gettocart()
@@ -133,6 +131,10 @@ function App() {
               path="/admin/addsubcategory"
               element={<Adminaddsubcategory />}
             />
+            <Route
+  path="/admin/dashboard"
+  element={<AdminDashboard  user={user}Getuserlength={Getuserlength}  dataproducts={dataproducts}  getdataproducts={getdataproducts} getorderlength={getorderlength} Getorderlength={Getorderlength} totalAfterDiscount={totalAfterDiscount} Gettocart={Gettocart}/>}
+/>
 
                         <Route path="/admin/addcoupoun" element={<Adminaddcoupounpage />} />
 

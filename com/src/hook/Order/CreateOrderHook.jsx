@@ -8,6 +8,8 @@ const CreateOrderHook = () => {
 
 
 const [getorder,setgetorder]=useState([]);
+const [getorderlength,setgetorderlength]=useState([]);
+
 const navigate=useNavigate()
 
 const [paginate,setpaginate]=useState({});
@@ -42,7 +44,23 @@ const [results,setresullts]=useState("");
         const data=await crtorder.json();
         console.log(data)
     }
+ async function Getorderlength(){
 
+        const getordere=await fetch(`https://ecommerce-complete-kbe3.onrender.com/api/v1/orders`,{
+            method:'GET',
+            headers:{
+                "Content-Type":"Application/json",
+                "Authorization":`Bearer ${localStorage.getItem("token")}`
+            },
+           
+        })
+//    console.log(getorder)
+       
+        const data=await getordere.json();
+        setgetorderlength(data.data)
+     
+        console.log("order",data.data.length)
+    }
 
  async function Getorder(page=1){
 
@@ -60,7 +78,7 @@ const [results,setresullts]=useState("");
         setgetorder(data.data)
         setresullts(data.results)
         setpaginate(data.paginationResult)
-        console.log(data.data)
+        console.log("order",data.data.length)
     }
 
     async function PymentMethode(id){
@@ -103,7 +121,7 @@ setTimeout(()=>{
 
 
 
-    return [Crateodrer,Getorder,getorder,paginate,results,PymentMethode]
+    return [Crateodrer,Getorder,getorder,paginate,results,PymentMethode,getorderlength,Getorderlength]
 }
 
 export default CreateOrderHook

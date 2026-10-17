@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 
 
-const AdminaAllOrder = ({item}) => {
+const AdminaAllOrder = ({item,index}) => {
 
   console.log(item)
     return (
@@ -24,7 +24,7 @@ const AdminaAllOrder = ({item}) => {
         <div className="w-100">
           <Row className="justify-content-between">
             <Col sm="12" className=" d-flex flex-row justify-content-between">
-              <div className="barnd-text d-inline pt-2 cat-text"  style={{fontWeight:'bold'}}>الطلب رقم #123</div>
+              <div className="barnd-text d-inline pt-2 cat-text"  style={{fontWeight:'bold'}}>الطلب رقم #{index+1}</div>
               {/* <div className="d-flex pt-2 " style={{ cursor: "pointer" }}>
                 <img src={deleteicon} alt="" width="20px" height="24px" />
               </div> */}

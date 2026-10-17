@@ -43,8 +43,8 @@ const AdminAllorderpage = ({Getorder,getorder,paginate,loading,getorderOne,oneor
          <div  style={{display:sidebarOpen?"show":""}}>
           <div  className='barnd-text' style={{direction:'rtl',fontWeight:'bold',marginBottom:'40px', fontSize:'24px'}}>  ادارة الطلبيات</div>
        {getorder&&  getorder.length>0? (
-        getorder.map((item)=>{
-          return ( <AdminAllorder loading={loading} getorderOne={getorderOne}oneorder={oneorder}  item={item}   />)
+        getorder.map((item,index)=>{
+          return ( <AdminAllorder loading={loading}  index={index} getorderOne={getorderOne}oneorder={oneorder}  item={item}   />)
         })
        ):null}
         {/* <AdminAllorder />

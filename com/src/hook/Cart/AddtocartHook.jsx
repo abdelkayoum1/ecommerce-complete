@@ -21,7 +21,7 @@ const AddtocartHook = ({dataproduct}) => {
   }
 async function Gettocart() {
 
-   
+  //  https://ecommerce-complete-kbe3.onrender.com
     const Gettocart = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/cart", {
       method: "GET",
       headers: {

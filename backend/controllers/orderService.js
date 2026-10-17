@@ -144,6 +144,7 @@ exports.checkoutSession = asyncHandler(async (req, res, next) => {
         amount: cartPrice,
         currency: 'dzd',
         payment_method: 'edahabia',
+        // http://ecommerce-complete-ten.vercel.app
         success_url: 'http://ecommerce-complete-ten.vercel.app/user/allorder',
         failure_url: 'http://ecommerce-complete-ten.vercel.app/cart',
         webhook_endpoint: 'https://ecommerce-complete-kbe3.onrender.com/api/v1/orders/webhook-checkout',
