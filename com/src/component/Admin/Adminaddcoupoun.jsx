@@ -70,7 +70,7 @@ const Adminaddcoupoun = () => {
         </Col>
         
       </Row>
-      <Box  sx={{background:'white',padding:'10px',width:'90%',marginTop:'5px',direction:'ltr'}}>
+      <Box  sx={{background:'white',padding:'10px',width:'95%',marginTop:'5px',direction:'ltr'}}>
 
          {allcpn.length>=0? (allcpn.map((itemcpn)=>{
         return(<AdmincoupnCard    Updatecoupoun={Updatecoupoun} deletecoupoun={deletecoupoun}  paginationpageCoupn={paginationpageCoupn}getallcpoupn={getallcpoupn} allcpnsitem={itemcpn}  key={itemcpn._id}/>)
