@@ -32,7 +32,7 @@ const Adminaddcoupounpage = () => {
 
       <Col
         style={{
-          flex: "1 1 auto",
+          // flex: "1 1 auto",
           minWidth: 0,
         }}
       >

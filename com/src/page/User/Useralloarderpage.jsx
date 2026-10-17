@@ -39,7 +39,7 @@ useEffect(()=>{
   return (
     <>
 
-    <Box  sx={{fontWeight:'bold',marginTop:'60px'}}>  عدد الطلبات #{results}</Box>
+    <Box className='عددالطلبات'  sx={{fontWeight:'bold'}}>  عدد الطلبات #{results}</Box>
       <div>
         {/* <div
           className="div"

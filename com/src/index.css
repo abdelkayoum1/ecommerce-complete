@@ -216,9 +216,23 @@ z-index: auto !important;
       /* background: red; */
       width: 100%;
     }
- 
+    .عددالطلبات{
+      margin-bottom: 60px;
+    }
+   
+  /* .admin-content-text{
+    margin-bottom: 100px;
+    background: red;
+  } */
 }
 @media(min-width: 995px) {
+  /* .admin-content-text{
+    margin-top: 100px;
+    background: red;
+  } */
+  .عددالطلبات{
+    margin-top: 60px;
+  }
     .sidebar-mobilee{
         display: none !important;
     }
