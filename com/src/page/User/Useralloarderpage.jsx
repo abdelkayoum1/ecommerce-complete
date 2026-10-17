@@ -61,7 +61,7 @@ useEffect(()=>{
                   })
                  ):null */}
 
-               <Box  sx={{position:'absolute', right:'40%'}}>  { paginate>=4 ? (<Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate}/>):null}</Box>
+               <Box className="paginate"  sx={{position:'absolute', right:'40%'}}>  { paginate>=4 ? (<Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate}/>):null}</Box>
                  {/* <Paginationn   onpress={(page)=>Getorder(page)}  pageCount={paginate}/> */}
 
       

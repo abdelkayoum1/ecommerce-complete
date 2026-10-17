@@ -210,6 +210,10 @@ z-index: auto !important;
     .تفاصيل{
       width: 100%;
     }
+    .paginate{
+      position: absolute;
+      right:40%;
+    }
  
 }
 @media(min-width: 995px) {
