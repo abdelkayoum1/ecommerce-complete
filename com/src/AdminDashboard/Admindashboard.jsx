@@ -18,15 +18,34 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import "../AdminDashboard/admindashboar.css";
-export default function AdminDashboard({Getuserlength,user,dataproducts,getdataproducts,getorderlength,Getorderlength}) {
-console.log(getorderlength)
+import Paginationn from "../component/utilite/Pagination";
+export default function AdminDashboard({getorder,paginate,Getorder,Getuserlength,user,dataproducts,getdataproducts,getorderlength,Getorderlength}) {
+ let itemtocarte;
 
+ console.log(paginate)
+  console.log("mapitem",getorderlength)
+  const item=getorder.map((itemm)=>
+{
+  itemtocarte= itemm;
+  return itemtocarte;
+
+}
+
+//     itemm.cartItems.map((itemcarte)=>{
+//      itemtocarte= itemcarte;
+//     return itemtocarte;
+//   }
+
+// ))
+)
+//  console.log("item",itemtocarte.cartItems)
 const totalorder=getorderlength.filter(val=>val.isPaid ===true).reduce((total,order)=>total+order.totalOrderPrice,0)
 console.log(totalorder)
   useEffect(()=>{
     getdataproducts();
     Getorderlength()
     Getuserlength();
+    Getorder();
   },[])
 
 
@@ -256,18 +275,21 @@ function StatCard({ item }) {
           </div>
 
           <div className="ad-alert-list">
-            {stockAlerts.map((product) => (
-              <div className="ad-alert-row" key={product.name}>
+            {getorder.slice(0,3).map((itemtocarte)=> itemtocarte.cartItems.map((itemcarte) => (
+              <div className="ad-alert-row" key={"itemcarte.product.title"}>
                 <div className="ad-alert-icon">
                   <FaExclamationTriangle />
                 </div>
 
                 <div>
-                  <strong>{product.name}</strong>
-                  <p>الكمية المتبقية: {product.stock}</p>
+                  <strong>{itemcarte.product.title}</strong>
+                  <p>الكمية المتبقية: {itemcarte.product.ratingsQuantity}</p>
                 </div>
               </div>
-            ))}
+                )))  }   
+
+
+                <Paginationn onpress={(page)=>{Getorder(page)}} pageCount={paginate}/> 
           </div>
         </section>
       </div>

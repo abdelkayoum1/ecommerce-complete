@@ -133,7 +133,7 @@ function App() {
             />
             <Route
   path="/admin/dashboard"
-  element={<AdminDashboard  user={user}Getuserlength={Getuserlength}  dataproducts={dataproducts}  getdataproducts={getdataproducts} getorderlength={getorderlength} Getorderlength={Getorderlength} totalAfterDiscount={totalAfterDiscount} Gettocart={Gettocart}/>}
+  element={<AdminDashboard getorder={getorder} paginate={paginate} Getorder={Getorder} user={user}Getuserlength={Getuserlength}  dataproducts={dataproducts}  getdataproducts={getdataproducts} getorderlength={getorderlength} Getorderlength={Getorderlength} />}
 />
 
                         <Route path="/admin/addcoupoun" element={<Adminaddcoupounpage />} />
