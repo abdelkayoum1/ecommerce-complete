@@ -13,7 +13,7 @@ function Slider() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect}  style={{marginTop:'65px'}}>
       <Carousel.Item  style={{display:'flex'}}   className='slider-background' interval={2000}>
         {/* <ExampleCarouselImage text="First slide" /> */}
                   <img className='img' src={Image} alt="" style={{width:'200px',position:'absolute',right:'300px',top:'30px',borderRadius:'10px'}}/>

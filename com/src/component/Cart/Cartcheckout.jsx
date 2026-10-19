@@ -39,6 +39,7 @@ async function handlepayer(){
             <Col xs="12" className="d-flex  flex-column  ">
                 <div className="d-flex  ">
                     <input
+                    
                     value={coupon}
                     style={{borderColor:'black',textDecoration:isvalid===true?'line-through':null}}
                         className="copon-input d-inline text-center "

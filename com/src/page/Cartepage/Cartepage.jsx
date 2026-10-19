@@ -7,7 +7,7 @@ import Container  from '@mui/material/Container'
 import AddtocartHook from '../../hook/Cart/AddtocartHook';
 import { Box } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
-
+import '../../index.css'
 const Cartepage = ({isvalid,setproducts,products,settotalAfterDiscount,totalAfterDiscount,coupon,setcoupoun,Updatecoupon,Gettocarte,Removeallcart,setdatacart,datacart,Deletecart,count,setcount,Updatecarteitem}) => {
  useEffect(()=>{
   Gettocarte()
@@ -50,7 +50,7 @@ console.log("carte",datacart)
  return (
     <Container  > 
     <div  >
-             <Typography  sx={{direction:'rtl',fontWeight:'bold',marginTop:'70px'}}> عربة  التسوق</Typography>
+             <Typography className="عربة"  sx={{direction:'rtl',fontWeight:'bold',marginTop:'70px',position:'relative',left:'90%'}}> عربة  التسوق</Typography>
       
       <Row  style={{direction:'rtl',display:'flex',justifyContent:'center',marginBottom:'15px'}}>
         <Col  xs="12" md="9">

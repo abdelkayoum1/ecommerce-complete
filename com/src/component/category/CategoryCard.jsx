@@ -6,8 +6,8 @@ import Typography  from '@mui/material/Typography';
 
 const CategoryCard = ({title,background,img}) => {
   return (
-    <Box  sx={{width:'150px',flexShrink:0,height:'200px'}}>
-      <Box  sx={{width:'100%',height:'100px',position:'relative', display: "flex",
+    <Box className="cardimage"  sx={{width:'150px',flexShrink:0,height:'200px'}}>
+      <Box className=""  sx={{width:'100%',height:'100px',position:'relative', display: "flex",
     justifyContent: "center"
     
     

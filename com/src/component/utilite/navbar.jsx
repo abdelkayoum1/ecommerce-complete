@@ -63,10 +63,12 @@ export default function Navbare({ products,datasearch,datacart }) {
     <AppBar
       position="fixed"
       sx={{
+      
         background: "#22272b",
+        
       }}
     >
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+      <Toolbar sx={{ justifyContent: "space-between", }}>
         {/* Left */}
         <Box
           sx={{

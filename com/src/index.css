@@ -53,8 +53,59 @@
       display: flex;
       flex-wrap: wrap;
       
+      
 }
 
+.cardimage{
+  animation: card  1s ease infinite alternate;
+ 
+  border-radius: 10px;
+}
+@keyframes card{
+
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform:translateY(-7px) ;
+  }
+}
+.عربة{
+  
+   /* display: inline-block; */
+  /* background: red; */
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px;
+  width: 0ch;
+  border-radius: 5px;
+  background: red;
+  direction: rtl;
+  text-align: right;
+  animation: fade 5s  2s steps(12) forwards infinite;
+}
+@keyframes  fade{
+   0% {
+    width: 0;
+  }
+
+  40% {
+    width: 15ch;
+  }
+
+  50% {
+    width: 15ch;
+  }
+
+  60%{
+    width: 0ch;
+  }
+  
+  
+  100% {
+    width: 0;
+  }
+}
 .sidbare:hover{
 background: black;
 border-radius: 5px;

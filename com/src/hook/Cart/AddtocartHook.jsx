@@ -20,7 +20,7 @@ const AddtocartHook = ({dataproduct}) => {
     setselectcolor(colors);
   }
 async function Gettocart() {
-
+// https://ecommerce-complete-kbe3.onrender.com
   //  https://ecommerce-complete-kbe3.onrender.com
     const Gettocart = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/cart", {
       method: "GET",
@@ -103,7 +103,7 @@ async function Gettocart() {
  
 
     // https://ecommerce-complete-kbe3.onrender.com
-     const updatecoupon = await fetch(`    https://ecommerce-complete-kbe3.onrender.com
+     const updatecoupon = await fetch(`https://ecommerce-complete-kbe3.onrender.com
 /api/v1/cart/applyCoupon`, {
       method: "PUT",
       headers: {
