@@ -11,11 +11,13 @@ import {useState,useEffect} from  'react'
 import Spinner from 'react-bootstrap/Spinner';
 import Box from '@mui/material/Box'
 const Categorycontainer = ({data,loading}) => {
+  console.log(data)
 
     const color=["#FFD3E8","#F4DB45","#55CFDF","#FF6262","#0034ff","#FFD3E8"]
     const [dataa, setdata] = useState([]);
+    // https://ecommerce-complete-kbe3.onrender.com
     async function getdata() {
-      const res = await fetch("https://ecommerce-complete-kbe3.onrender.com/api/v1/category", {
+      const res = await fetch("http://localhost:5000/api/v1/category", {
         method: "Get",
       });
       const data = await res.json();
@@ -30,7 +32,7 @@ const Categorycontainer = ({data,loading}) => {
     }, []);
   return (
     <>
-   <div>
+   <div style={{marginTop:'70px'}} >
       {/* <SubTitle  title='المزيد'   btntitle='التصنيفات'  path='/allcategory' /> */}
       <Box className="box" sx={{textAlign:"end",fontWeight:'bold',mt:'10px',marginRight:"10px"}} >كل  التصنيفات</Box>
      <Box  sx={{
@@ -42,11 +44,11 @@ const Categorycontainer = ({data,loading}) => {
     margin:'30px'
     
   }}>
-     { loading?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box> :data.map((item,index)=> { return dataa.length>0 ? (
-                <CategoryCard  key={index} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
-              ) : <h4>لاتوجد  منتجات</h4>})}
-   
-          
+     { loading?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box>
+      : data.length>0?(data.map((item,index)=>{
+        return  <CategoryCard  key={index} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
+      })): <Box  sx={{position:'absolute',right:'45%'}}><h4>لاتوجد  منتجات</h4></Box>}
+
           </Box>
     </div>
      </>

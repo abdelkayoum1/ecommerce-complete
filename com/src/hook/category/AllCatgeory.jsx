@@ -5,7 +5,7 @@ const AllCatgory = () => {
   const [dataa, setdata] = useState([]);
   const [loading, setloading] = useState(true);
   const [cptpage, setpage] = useState(0);
-
+// https://ecommerce-complete-kbe3.onrender.com
   async function getdata(page=1) {
     try {
       const res = await fetch(

@@ -7,11 +7,14 @@ import Paginationn from "../../component/utilite/Pagination";
 import AllCategory from '../../hook/category/AllCatgeory'
 const Allcategory = () => {
    const [handlepage,getdata,dataa,loading,cptpage]=AllCategory();
+   console.log(dataa)
   return (
     <>
       <div style={{ display: "flex" }}></div>
       <Categorycontainer   data={dataa}  loading={loading}/>
-      {cptpage>1 ?  (<Paginationn pageCount={cptpage} onpress={handlepage} />):null}
+      {/* {cptpage>1 ? dataa? <Paginationn pageCount={cptpage} onpress={handlepage} />:null:null} */}
+
+      {cptpage>1 ? <Paginationn pageCount={cptpage} onpress={handlepage} />:null}
     </>
   );
 };
