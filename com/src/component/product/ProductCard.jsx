@@ -14,7 +14,7 @@ import notify from '../../hook/useNotification';
 import { ToastContainer } from 'react-toastify';
 import { Auth } from '../../page/auth/context/auth/authContext';
 
-const ProductCard = ({product,isfavid,setisfavid,datafav,setdatafav}) => {
+const ProductCard = ({product,isfavid,setisfavid,datafav,setdatafav,style}) => {
   
   console.log("isfav",datafav)
    const[img,setimg]=useState(Favoff);
@@ -153,8 +153,30 @@ const[valid,setvalid]=useState(isfav)
       setimg(Favoff)
     }
   },[valid])
+
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  const cards = document.querySelectorAll(".productcard");
+
+  cards.forEach((card) => observer.observe(card));
+
+  return () => observer.disconnect();
+  }, [product]);
   return (
-    <Card  className='cardd'    style={{width:'250px'}}>
+    <Card  className='productcard'    style={{width:'250px',...style}}>
         <Link  to={`/products/${product._id}`}>
        
       <Card.Img variant="top" src={product.imageCover}   style={{

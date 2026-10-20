@@ -46,7 +46,7 @@ const Categorycontainer = ({data,loading}) => {
   }}>
      { loading?   <Box  sx={{width:'100%',display:'flex',justifyContent:'center'}}><Spinner animation="border"   variant="primary" /></Box>
       : data.length>0?(data.map((item,index)=>{
-        return  <CategoryCard  key={index} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
+        return  <CategoryCard  key={data._id} title={item.name} img={`https://ecommerce-complete-kbe3.onrender.com/images/${item.image}`} background={color[Math.floor(Math.random()*5)+1]} />
       })): <Box  sx={{position:'absolute',right:'45%'}}><h4>لاتوجد  منتجات</h4></Box>}
 
           </Box>

@@ -22,7 +22,7 @@ console.log(product)
 
 
     {product ?  (product.map((item,index)=>{
-      return (<ProductCard key={item._id} isfavid={favid} product={item}  datafav={datafav} setdatafav={setdatafav}  setisfavid={setfavid}/>)
+      return (<ProductCard key={item._id}  style={{"":`${index*0.5}s`}} isfavid={favid} product={item}  datafav={datafav} setdatafav={setdatafav}  setisfavid={setfavid}/>)
     }) 
 ):<h6>لا توجد منتجات</h6>}
       

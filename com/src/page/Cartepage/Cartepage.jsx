@@ -47,16 +47,39 @@ console.log("carte",datacart)
 //    console.log("cart",datacart)
 
 // },[])
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  const cards = document.querySelectorAll(".productcard");
+
+  cards.forEach((card) => observer.observe(card));
+
+  return () => observer.disconnect();
+}, [products]);
  return (
     <Container  > 
     <div  >
-             <Typography className="عربة"  sx={{direction:'rtl',fontWeight:'bold',marginTop:'70px',position:'relative',left:'90%'}}> عربة  التسوق</Typography>
+             <Typography className="عربة"  sx={{direction:'rtl',fontWeight:'bold',marginTop:'70px',position:'relative',left:'50%'}}> عربة  التسوق</Typography>
       
       <Row  style={{direction:'rtl',display:'flex',justifyContent:'center',marginBottom:'15px'}}>
         <Col  xs="12" md="9">
 
-        {  products&& products.length>0 ? (products.map((item)=>{
-                  return   <CartItem Updatecarteitem={Updatecarteitem}   count={count} setcount={setcount} Deletecart={Deletecart} Gettocarte={Gettocarte} setdatacart={setdatacart} Removeallcart={()=>remove(item._id)}  datacart={item}  key={item._id}/>
+        {  products&& products.length>0 ? (products.map((item,index)=>{
+                  return   <CartItem Updatecarteitem={Updatecarteitem}  style={{
+        animationDelay: `${index * 0.25}s`
+      }}  count={count} setcount={setcount} Deletecart={Deletecart} Gettocarte={Gettocarte} setdatacart={setdatacart} Removeallcart={()=>remove(item._id)}  datacart={item}  key={item._id}/>
 
         })):<Box sx={{width:'100%', top:'50%',textAlign:'center', right:'50%'}}><h6  style={{fontSize:'24px'}}  className='barnd-text'>  السلة فارغة </h6></Box> }
                  

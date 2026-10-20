@@ -8,6 +8,7 @@ import "../../index.css";
 import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 const CartItem = ({
+  style,
   products,
   datacart,
   Removeallcart,
@@ -40,6 +41,8 @@ const CartItem = ({
         background: "rgb(204, 202, 206)",
         marginRight: "5px",
       }}
+      className="productcard"
+      style={style}
     >
       <Col
         xs="12"
