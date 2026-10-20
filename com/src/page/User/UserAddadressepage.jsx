@@ -24,7 +24,7 @@ const UserAddadressepage = () => {
            <Textfilied  value={city}  onChange={(e)=>{setcity(e.target.value)}} sx={{direction:'ltr'}} placeholder='تسمية المدينة'  style={{width:'50%',direction:'rtl'}}/>
 
            <Textfilied value={postalcode}  onChange={(e)=>{setcodepostal(e.target.value)}} placeholder='رقم بوسطال'type='number'  style={{width:'50%',direction:'rtl'}}/>
-<Button  variant='contained' onClick={adduseradres} >اضافة عنوان</Button>
+<Button className='اضافة'  variant='contained' onClick={adduseradres} >اضافة عنوان</Button>
       </Box>
       <ToastContainer/>
     </div>
