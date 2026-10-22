@@ -326,7 +326,7 @@ z-index: auto !important;
 .hero-image {
   width: 10%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   display: block;
 }
 
