@@ -316,19 +316,12 @@ z-index: auto !important;
     .عددالطلبات{
       margin-bottom: 60px;
     }
-
-.hero-container {
-  width:  100%;
+    .hero-container {
+  width: 50%;
+  height: 100vh;
   overflow: hidden;
 }
 
-
-.hih{
-  position: absolute;
-
-  top: -20%;
-  left: 45%;
-}
 
    
   /* .admin-content-text{
@@ -377,3 +370,21 @@ z-index: auto !important;
 }
 
 
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hih{
+  position: absolute;
+
+  top: -20%;
+  left: 45%;
+}
