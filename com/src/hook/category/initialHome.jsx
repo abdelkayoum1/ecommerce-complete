@@ -11,7 +11,7 @@ const InitialHome = () => {
 
 
 
-      <Button  variant='contained'  className="btnnn"  onClick={()=>navigate("/homepage")}>  تسوق  الان
+      <Button  variant='contained'  className="btnnn"  style={{color:'black'}} onClick={()=>navigate("/homepage")}>  تسوق  الان
 <span  style={{color:'black'}}>→</span>
 
       </Button>
