@@ -317,7 +317,7 @@ z-index: auto !important;
       margin-bottom: 60px;
     }
     .hero-container {
-  width: 10% !important;
+  width: 100% !important;
   height: 100vh !important;
   overflow: hidden !important;
 }
