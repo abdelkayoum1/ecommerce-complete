@@ -46,6 +46,7 @@ import Carousel from "./component/product/carousel";
 import GetOrderOne from "./hook/Order/GetOrderOne";
 import AdminDashboard from "./AdminDashboard/Admindashboard";
 import Getalluser from "./hook/User/Getalluser";
+import InitialHome from "./hook/category/initialHome";
 
 function App() {
   const [dataproduct,getdataproductsearch,getdatasearch,pagination,paginationpage,dataproducts,getdataproducts] = ViewsSearchproductHome();
@@ -155,6 +156,8 @@ function App() {
             <Route path="/user/addadress" element={<Useraddadress />} />
             <Route path="/user/editadress/:id" element={<UserEditadressepage />} />
             <Route path="/user/prefile" element={<Userprefilepage />} />
+                        <Route path="/initialhome" element={<InitialHome />} />
+
             <Route
               path="/admin/editproduct/:id"
               element={<AdminEditproduct />}
