@@ -322,7 +322,19 @@ z-index: auto !important;
   overflow: hidden;
 }
 
-.hero-image {
+
+   
+  /* .admin-content-text{
+    margin-bottom: 100px;
+    background: red;
+  } */
+}
+@media(min-width: 995px) {
+  /* .admin-content-text{
+    margin-top: 100px;
+    background: red;
+  } */
+   .hero-image {
   width: 50%;
   height: 100%;
   object-fit: cover;
@@ -335,17 +347,6 @@ z-index: auto !important;
   left:40%;
   color: black;
 }
-   
-  /* .admin-content-text{
-    margin-bottom: 100px;
-    background: red;
-  } */
-}
-@media(min-width: 995px) {
-  /* .admin-content-text{
-    margin-top: 100px;
-    background: red;
-  } */
   .عددالطلبات{
     margin-top: 60px;
   }
