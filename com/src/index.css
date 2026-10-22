@@ -318,7 +318,7 @@ z-index: auto !important;
     }
 
 .hero-container {
-  width:  50%;
+  width:  100%;
   overflow: hidden;
 }
 
@@ -326,7 +326,7 @@ z-index: auto !important;
 .hih{
   position: absolute;
 
-  top: 20%;
+  top: -20%;
   left: 45%;
 }
 
