@@ -316,6 +316,24 @@ z-index: auto !important;
     .عددالطلبات{
       margin-bottom: 60px;
     }
+    .hero-container {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.btnnn{
+  position: absolute;
+
+  top: -20%;
+  left:40%;
+}
    
   /* .admin-content-text{
     margin-bottom: 100px;
