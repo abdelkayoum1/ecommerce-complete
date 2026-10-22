@@ -334,12 +334,20 @@ z-index: auto !important;
     margin-top: 100px;
     background: red;
   } */
-   .hero-image {
-  width: 50%;
+   .hero-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+ 
 .hih{
   position: absolute;
 
