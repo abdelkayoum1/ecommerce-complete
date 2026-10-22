@@ -317,14 +317,14 @@ z-index: auto !important;
       margin-bottom: 60px;
     }
     .hero-container {
-  width: 50%;
+  width: 10%;
   height: 100vh;
   overflow: hidden;
 }
 
 
 .hero-image {
-  width: 50%;
+  width: 10%;
   height: 100%;
   object-fit: cover;
   display: block;
