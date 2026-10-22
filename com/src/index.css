@@ -318,7 +318,7 @@ z-index: auto !important;
     }
 
 .hero-container {
-  height: 100svh;
+  height: 100%;
   overflow: hidden;
 }
 
