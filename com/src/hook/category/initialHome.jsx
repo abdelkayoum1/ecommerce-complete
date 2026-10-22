@@ -1,6 +1,6 @@
 import React from 'react'
 import img from '../../assets/Scène e-commerce pastel et dorée.png';
-
+import '../../index.css'
 import Button from '@mui/material/Button'
 import { Navigate, useNavigate } from 'react-router-dom';
 const InitialHome = () => {
