@@ -321,7 +321,13 @@ z-index: auto !important;
   height: 100vh;
   overflow: hidden;
 }
+.hih{
+  position: absolute;
 
+  top: -2%;
+  left:40%;
+  color: black !important;
+}
 
    
   /* .admin-content-text{
